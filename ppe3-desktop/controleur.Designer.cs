@@ -51,6 +51,7 @@
             this.modifierToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierFilm1 = new ppe3_desktop.ModifierFilm();
             this.validationCompte1 = new ppe3_desktop.VUES.COMPTE.validationCompte();
+            this.ajouterFilm2 = new ppe3_desktop.VUES.COMPOSANT.FILM.AjouterFilm();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -240,17 +241,26 @@
             this.validationCompte1.TabIndex = 1;
             this.validationCompte1.Visible = false;
             // 
+            // ajouterFilm2
+            // 
+            this.ajouterFilm2.Location = new System.Drawing.Point(0, 34);
+            this.ajouterFilm2.Name = "ajouterFilm2";
+            this.ajouterFilm2.Size = new System.Drawing.Size(1067, 526);
+            this.ajouterFilm2.TabIndex = 5;
+            this.ajouterFilm2.Visible = false;
+            // 
             // controleur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.ajouterFilm2);
             this.Controls.Add(this.modifierFilm1);
             this.Controls.Add(this.validationCompte1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "controleur";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
@@ -286,6 +296,7 @@
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem4;
         private ModifierFilm modifierFilm1;
+        private VUES.COMPOSANT.FILM.AjouterFilm ajouterFilm2;
     }
 }
 

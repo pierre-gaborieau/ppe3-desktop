@@ -131,12 +131,25 @@ namespace ppe3_desktop
             modifierFilm1.Visible = true;
         }
 
-        public void AjouterFilm(string leTitre, string leReal, int idGenre)
+        public void AjouterFilm(List<support> lesSupport, string leTitre, string leReal, int idGenre, string imageName, string duree)
         {
             using (var context = new connexionBase())
             {
-                int noOfRowUpdated = context.Database.ExecuteSqlCommand("INSERT INTO support ('idSupport','titreSupport','realisateur','image','idGenre') VALUES ('57', "+leTitre+", "+leReal+", '12.jpg', "+idGenre+");");
+                int noOfRowUpdated = context.Database.ExecuteSqlCommand("INSERT INTO support (titreSupport, realisateur, image, idGenre) VALUES ('"+leTitre+"', '"+leReal+"', '"+imageName+".jpg', '"+idGenre+"')");
             }
+
+            int max = 0;
+
+            foreach(support s in lesSupport)
+            {
+                if(s.idSupport > max)
+                {
+                    max = s.idSupport;
+                }
+            }
+
+
+            allFalse();
         }
 
         

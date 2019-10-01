@@ -77,7 +77,13 @@ namespace ppe3_desktop
             List<support> listeSend = new List<support>();
             foreach (support c in maConnexion.support.ToList())
             {
-                listeSend.Add(c);
+                foreach (film f in maConnexion.film.ToList())
+                {
+                    if(c.idSupport == f.idFilm)
+                    {
+                        listeSend.Add(c);
+                    }
+                }
             }
             modifierFilm1.afficherPage(listeSend);
 

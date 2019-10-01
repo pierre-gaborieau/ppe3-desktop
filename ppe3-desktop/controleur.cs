@@ -55,6 +55,7 @@ namespace ppe3_desktop
         private void allFalse()
         {
             validationCompte1.Visible = false;
+            ajouterFilm1.Visible = false;
             modifierFilm1.Visible = false;
         }
 

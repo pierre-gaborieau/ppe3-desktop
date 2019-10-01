@@ -1,28 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ppe3_desktop.VUES.COMPTE;
 using System.Windows.Forms;
 
-namespace ppe3_desktop
+namespace ppe3_desktop.VUES.COMPTE
 {
-    public partial class controleur : Form
+    public partial class validationCompte : UserControl
     {
         connexionBase maConnexion;
-        public controleur()
+        public validationCompte()
         {
             InitializeComponent();
+
             maConnexion = new connexionBase();
-        }
 
-        private void ValidationComtpeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            clientBindingSource.DataSource = maConnexion.client.ToList();
+            
         }
     }
 }

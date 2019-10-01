@@ -33,6 +33,7 @@
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validationComtpeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.validationCompte1 = new ppe3_desktop.VUES.COMPTE.validationCompte();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,11 +77,22 @@
             this.validationComtpeToolStripMenuItem.Text = "Validation Compte";
             this.validationComtpeToolStripMenuItem.Click += new System.EventHandler(this.ValidationComtpeToolStripMenuItem_Click);
             // 
+            // validationCompte1
+            // 
+            this.validationCompte1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.validationCompte1.Location = new System.Drawing.Point(0, 27);
+            this.validationCompte1.Name = "validationCompte1";
+            this.validationCompte1.Size = new System.Drawing.Size(800, 422);
+            this.validationCompte1.TabIndex = 1;
+            // 
             // controleur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.validationCompte1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "controleur";
@@ -99,6 +111,7 @@
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem compteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validationComtpeToolStripMenuItem;
+        private VUES.COMPTE.validationCompte validationCompte1;
     }
 }
 

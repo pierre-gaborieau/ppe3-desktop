@@ -12,11 +12,11 @@ namespace ppe3_desktop.VUES.COMPTE
 {
     public partial class validationCompte : UserControl
     {
+
         public validationCompte()
         {
             InitializeComponent();
 
-            clientBindingSource.DataSource = ((controleur)(this.Parent)).maConnexion.client.ToList();
             
         }
     }

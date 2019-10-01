@@ -43,12 +43,13 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.clientTableAdapter = new ppe3_desktop.PPE3_GABORIEAU_LAUGEREDataSetTableAdapters.clientTableAdapter();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenomClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateAbonnementClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientTableAdapter = new ppe3_desktop.PPE3_GABORIEAU_LAUGEREDataSetTableAdapters.clientTableAdapter();
+            this.btn_activation = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
@@ -127,6 +128,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -173,15 +175,11 @@
             this.prenomClientDataGridViewTextBoxColumn,
             this.dateAbonnementClientDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.clientBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(100, 72);
+            this.dataGridView1.Location = new System.Drawing.Point(37, 85);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 304);
+            this.dataGridView1.Size = new System.Drawing.Size(545, 304);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // clientTableAdapter
-            // 
-            this.clientTableAdapter.ClearBeforeFill = true;
             // 
             // loginDataGridViewTextBoxColumn
             // 
@@ -218,10 +216,25 @@
             this.dateAbonnementClientDataGridViewTextBoxColumn.Name = "dateAbonnementClientDataGridViewTextBoxColumn";
             this.dateAbonnementClientDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // clientTableAdapter
+            // 
+            this.clientTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_activation
+            // 
+            this.btn_activation.Location = new System.Drawing.Point(629, 209);
+            this.btn_activation.Name = "btn_activation";
+            this.btn_activation.Size = new System.Drawing.Size(179, 29);
+            this.btn_activation.TabIndex = 2;
+            this.btn_activation.Text = "Activer l\'utilisateur ";
+            this.btn_activation.UseVisualStyleBackColor = true;
+            this.btn_activation.Click += new System.EventHandler(this.Btn_activation_Click);
+            // 
             // validationCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_activation);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "validationCompte";
@@ -258,5 +271,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomClientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenomClientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateAbonnementClientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_activation;
     }
 }

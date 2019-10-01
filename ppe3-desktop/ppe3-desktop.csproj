@@ -107,6 +107,12 @@
     <Compile Include="support.cs">
       <DependentUpon>SqueletteDesDonnées.tt</DependentUpon>
     </Compile>
+    <Compile Include="VUES\COMPOSANT\FILM\AjouterFilm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VUES\COMPOSANT\FILM\AjouterFilm.Designer.cs">
+      <DependentUpon>AjouterFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="VUES\COMPTE\validationCompte.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VUES\COMPOSANT\FILM\AjouterFilm.resx">
+      <DependentUpon>AjouterFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VUES\COMPTE\validationCompte.resx">
       <DependentUpon>validationCompte.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,7 +185,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="VUES\COMPOSANT\FILM\" />
     <Folder Include="VUES\COMPOSANT\GENRE\" />
     <Folder Include="VUES\COMPOSANT\SERIE\" />
   </ItemGroup>

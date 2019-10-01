@@ -44,5 +44,10 @@ namespace ppe3_desktop
         {
             this.Close();
         }
+
+        private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ajouterFilm1.Visible = true;
+        }
     }
 }

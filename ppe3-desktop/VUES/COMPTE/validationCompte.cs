@@ -16,7 +16,7 @@ namespace ppe3_desktop.VUES.COMPTE
         {
             InitializeComponent();
 
-
+            clientBindingSource.DataSource = ((controleur)(this.Parent)).maConnexion.client.ToList();
             
         }
     }

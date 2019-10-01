@@ -13,7 +13,7 @@ namespace ppe3_desktop
 {
     public partial class controleur : Form
     {
-        connexionBase maConnexion;
+        public connexionBase maConnexion;
         public controleur()
         {
             InitializeComponent();

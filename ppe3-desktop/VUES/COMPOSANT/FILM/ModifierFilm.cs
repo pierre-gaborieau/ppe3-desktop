@@ -12,6 +12,7 @@ namespace ppe3_desktop
 {
     public partial class ModifierFilm : UserControl
     {
+        private List<film> lesFilms = new List<film>();
         public ModifierFilm()
         {
             InitializeComponent();

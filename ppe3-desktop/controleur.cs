@@ -7,7 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
+
 using ppe3_desktop.VUES.COMPTE;
+using ppe3_desktop.VUES.COMPOSANT;
+using System.Data.SqlClient;
 
 namespace ppe3_desktop
 {
@@ -23,7 +27,6 @@ namespace ppe3_desktop
         private void ValidationComtpeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             allFalse();
-            validationCompte1.Visible = true;
             List<client> listeSend = new List<client>();
             foreach(client c in maConnexion.client.ToList())
             {
@@ -33,6 +36,20 @@ namespace ppe3_desktop
                 }
             }
             validationCompte1.afficherPage(listeSend);
+
+            validationCompte1.Visible = true;
+        }
+
+        public void ActivationCompte(client c)
+        {
+
+            using (var context = new connexionBase())
+            {
+                /*int query = context.client
+                    .ExecuteSqlCommand("UPDATE actif in CLIENT SET 1 where login=@login", new SqlParameter("@login", c.login));
+                Console.WriteLine(query.nomClient);*/
+            }
+
         }
 
         private void allFalse()

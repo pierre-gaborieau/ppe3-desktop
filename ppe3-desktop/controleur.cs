@@ -13,7 +13,7 @@ namespace ppe3_desktop
 {
     public partial class controleur : Form
     {
-        connexionBase maConnexion;
+        public connexionBase maConnexion;
         public controleur()
         {
             InitializeComponent();
@@ -29,6 +29,11 @@ namespace ppe3_desktop
         private void allFalse()
         {
             validationCompte1.Visible = false;
+        }
+
+        private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -101,5 +101,13 @@ namespace ppe3_desktop
 
             modifierFilm1.Visible = true;
         }
+
+        public void AjouterFilm(string leTitre, string leReal, int idGenre)
+        {
+            using (var context = new connexionBase())
+            {
+                int noOfRowUpdated = context.Database.ExecuteSqlCommand("INSERT INTO support ('idSupport','titreSupport','realisateur','image','idGenre') VALUES ('57', "+leTitre+", "+leReal+", '12.jpg', "+idGenre+");");
+            }
+        }
     }
 }

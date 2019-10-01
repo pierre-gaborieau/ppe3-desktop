@@ -30,5 +30,13 @@ namespace ppe3_desktop.VUES.COMPOSANT.FILM
                 GenreBox.Items.Add(g.libelleGenre);
             }
         }
+
+        private void AddMovie_Click(object sender, EventArgs e)
+        {
+            if(TitleMovie.Text != null && RealMovie.Text != null && GenreBox.SelectedIndex != 0)
+            {
+                ((controleur)(this.Parent)).AjouterFilm(TitleMovie.Text, RealMovie.Text, GenreBox.SelectedIndex);
+            }
+        }
     }
 }

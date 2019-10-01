@@ -100,6 +100,7 @@
             this.AddMovie.TabIndex = 6;
             this.AddMovie.Text = "Ajouter";
             this.AddMovie.UseVisualStyleBackColor = true;
+            this.AddMovie.Click += new System.EventHandler(this.AddMovie_Click);
             // 
             // pPE3_GABORIEAU_LAUGEREDataSet
             // 

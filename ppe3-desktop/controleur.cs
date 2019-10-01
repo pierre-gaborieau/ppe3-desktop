@@ -55,7 +55,7 @@ namespace ppe3_desktop
         private void allFalse()
         {
             validationCompte1.Visible = false;
-            ajouterFilm1.Visible = false;
+            //ajouterFilm1.Visible = false;
             modifierFilm1.Visible = false;
         }
 
@@ -73,6 +73,14 @@ namespace ppe3_desktop
         private void modifierToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             allFalse();
+
+            List<support> listeSend = new List<support>();
+            foreach (support c in maConnexion.support.ToList())
+            {
+                listeSend.Add(c);
+            }
+            modifierFilm1.afficherPage(listeSend);
+
             modifierFilm1.Visible = true;
         }
     }

@@ -12,10 +12,16 @@ namespace ppe3_desktop
 {
     public partial class ModifierFilm : UserControl
     {
-        private List<film> lesFilms = new List<film>();
+        private List<support> lesFilms = new List<support>();
         public ModifierFilm()
         {
             InitializeComponent();
+        }
+
+        public void afficherPage(List<support> laListe)
+        {
+            ListeFilm.DataSource = laListe;
+            lesFilms = laListe;
         }
     }
 }

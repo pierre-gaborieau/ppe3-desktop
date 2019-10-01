@@ -66,5 +66,10 @@ namespace ppe3_desktop
         {
             ajouterFilm1.Visible = true;
         }
+
+        private void modifierToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            modifierFilm1.Visible = true;
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ppe3_desktop;
 
 namespace ppe3_desktop.VUES.COMPTE
 {
@@ -18,6 +19,12 @@ namespace ppe3_desktop.VUES.COMPTE
             InitializeComponent();
 
             
+            
+        }
+
+        public void afficherPage(List<client> laListe)
+        {
+            clientBindingSource.DataSource = laListe;
         }
     }
 }

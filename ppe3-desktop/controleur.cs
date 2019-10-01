@@ -13,17 +13,18 @@ namespace ppe3_desktop
 {
     public partial class controleur : Form
     {
-        public connexionBase maConnexion;
+        public connexionBase maConnexion = new connexionBase();
         public controleur()
         {
             InitializeComponent();
-            maConnexion = new connexionBase();
+           
         }
 
         private void ValidationComtpeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             allFalse();
             validationCompte1.Visible = true;
+            validationCompte1.afficherPage(maConnexion.client.ToList());
         }
 
         private void allFalse()

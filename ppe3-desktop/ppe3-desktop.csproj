@@ -125,6 +125,12 @@
     <Compile Include="VUES\COMPTE\validationCompte.Designer.cs">
       <DependentUpon>validationCompte.cs</DependentUpon>
     </Compile>
+    <Compile Include="VUES\COMPTE\verificationCompte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VUES\COMPTE\verificationCompte.Designer.cs">
+      <DependentUpon>verificationCompte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="controleur.resx">
       <DependentUpon>controleur.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VUES\COMPTE\validationCompte.resx">
       <DependentUpon>validationCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VUES\COMPTE\verificationCompte.resx">
+      <DependentUpon>verificationCompte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="PPE3_GABORIEAU_LAUGEREDataSet.xsc">

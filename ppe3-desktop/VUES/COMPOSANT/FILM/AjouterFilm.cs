@@ -33,9 +33,9 @@ namespace ppe3_desktop.VUES.COMPOSANT.FILM
 
         private void AddMovie_Click(object sender, EventArgs e)
         {
-            if(TitleMovie.Text != null && RealMovie.Text != null && GenreBox.SelectedIndex != 0)
+            if(TitleMovie.Text != null && RealMovie.Text != null && GenreBox.SelectedIndex != 0 && imageName.Text != null && duree.Text != null)
             {
-                ((controleur)(this.Parent)).AjouterFilm(TitleMovie.Text, RealMovie.Text, GenreBox.SelectedIndex);
+                ((controleur)(this.Parent)).AjouterFilm(lesFilms, TitleMovie.Text, RealMovie.Text, GenreBox.SelectedIndex, imageName.Text, duree.Text);
             }
         }
     }

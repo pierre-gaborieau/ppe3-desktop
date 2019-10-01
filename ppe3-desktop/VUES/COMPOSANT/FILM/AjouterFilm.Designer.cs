@@ -39,6 +39,10 @@
             this.pPE3_GABORIEAU_LAUGEREDataSet = new ppe3_desktop.PPE3_GABORIEAU_LAUGEREDataSet();
             this.supportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.supportTableAdapter = new ppe3_desktop.PPE3_GABORIEAU_LAUGEREDataSetTableAdapters.supportTableAdapter();
+            this.imageName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.duree = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pPE3_GABORIEAU_LAUGEREDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supportBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +98,7 @@
             // 
             // AddMovie
             // 
-            this.AddMovie.Location = new System.Drawing.Point(3, 89);
+            this.AddMovie.Location = new System.Drawing.Point(3, 177);
             this.AddMovie.Name = "AddMovie";
             this.AddMovie.Size = new System.Drawing.Size(75, 23);
             this.AddMovie.TabIndex = 6;
@@ -116,10 +120,46 @@
             // 
             this.supportTableAdapter.ClearBeforeFill = true;
             // 
+            // imageName
+            // 
+            this.imageName.Location = new System.Drawing.Point(3, 89);
+            this.imageName.Name = "imageName";
+            this.imageName.Size = new System.Drawing.Size(100, 22);
+            this.imageName.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(109, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Nom de l\'image";
+            // 
+            // duree
+            // 
+            this.duree.Location = new System.Drawing.Point(3, 117);
+            this.duree.Name = "duree";
+            this.duree.Size = new System.Drawing.Size(100, 22);
+            this.duree.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(109, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Durée du film";
+            // 
             // AjouterFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.duree);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.imageName);
             this.Controls.Add(this.AddMovie);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -148,5 +188,9 @@
         private System.Windows.Forms.BindingSource supportBindingSource;
         private PPE3_GABORIEAU_LAUGEREDataSet pPE3_GABORIEAU_LAUGEREDataSet;
         private PPE3_GABORIEAU_LAUGEREDataSetTableAdapters.supportTableAdapter supportTableAdapter;
+        private System.Windows.Forms.TextBox imageName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox duree;
+        private System.Windows.Forms.Label label5;
     }
 }

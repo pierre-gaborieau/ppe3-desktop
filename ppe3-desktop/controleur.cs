@@ -18,5 +18,10 @@ namespace ppe3_desktop
             InitializeComponent();
             maConnexion = new connexionBase();
         }
+
+        private void ValidationComtpeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -59,7 +59,7 @@
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             // 
             // compteToolStripMenuItem
@@ -73,7 +73,7 @@
             // validationComtpeToolStripMenuItem
             // 
             this.validationComtpeToolStripMenuItem.Name = "validationComtpeToolStripMenuItem";
-            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.validationComtpeToolStripMenuItem.Text = "Validation Compte";
             this.validationComtpeToolStripMenuItem.Click += new System.EventHandler(this.ValidationComtpeToolStripMenuItem_Click);
             // 
@@ -86,6 +86,7 @@
             this.validationCompte1.Name = "validationCompte1";
             this.validationCompte1.Size = new System.Drawing.Size(800, 422);
             this.validationCompte1.TabIndex = 1;
+            this.validationCompte1.Visible = false;
             // 
             // controleur
             // 

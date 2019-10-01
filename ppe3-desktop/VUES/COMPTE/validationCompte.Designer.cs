@@ -43,12 +43,12 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clientTableAdapter = new ppe3_desktop.PPE3_GABORIEAU_LAUGEREDataSetTableAdapters.clientTableAdapter();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenomClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateAbonnementClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientTableAdapter = new ppe3_desktop.PPE3_GABORIEAU_LAUGEREDataSetTableAdapters.clientTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
@@ -167,56 +167,56 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.loginDataGridViewTextBoxColumn,
+            this.emailClientDataGridViewTextBoxColumn,
             this.nomClientDataGridViewTextBoxColumn,
             this.prenomClientDataGridViewTextBoxColumn,
-            this.emailClientDataGridViewTextBoxColumn,
-            this.dateAbonnementClientDataGridViewTextBoxColumn,
-            this.loginDataGridViewTextBoxColumn});
+            this.dateAbonnementClientDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.clientBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 66);
+            this.dataGridView1.Location = new System.Drawing.Point(100, 72);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(544, 304);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // clientTableAdapter
+            // 
+            this.clientTableAdapter.ClearBeforeFill = true;
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailClientDataGridViewTextBoxColumn
+            // 
+            this.emailClientDataGridViewTextBoxColumn.DataPropertyName = "emailClient";
+            this.emailClientDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailClientDataGridViewTextBoxColumn.Name = "emailClientDataGridViewTextBoxColumn";
+            this.emailClientDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nomClientDataGridViewTextBoxColumn
             // 
             this.nomClientDataGridViewTextBoxColumn.DataPropertyName = "nomClient";
-            this.nomClientDataGridViewTextBoxColumn.HeaderText = "nomClient";
+            this.nomClientDataGridViewTextBoxColumn.HeaderText = "Nom";
             this.nomClientDataGridViewTextBoxColumn.Name = "nomClientDataGridViewTextBoxColumn";
             this.nomClientDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // prenomClientDataGridViewTextBoxColumn
             // 
             this.prenomClientDataGridViewTextBoxColumn.DataPropertyName = "prenomClient";
-            this.prenomClientDataGridViewTextBoxColumn.HeaderText = "prenomClient";
+            this.prenomClientDataGridViewTextBoxColumn.HeaderText = "Prenom";
             this.prenomClientDataGridViewTextBoxColumn.Name = "prenomClientDataGridViewTextBoxColumn";
             this.prenomClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailClientDataGridViewTextBoxColumn
-            // 
-            this.emailClientDataGridViewTextBoxColumn.DataPropertyName = "emailClient";
-            this.emailClientDataGridViewTextBoxColumn.HeaderText = "emailClient";
-            this.emailClientDataGridViewTextBoxColumn.Name = "emailClientDataGridViewTextBoxColumn";
-            this.emailClientDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dateAbonnementClientDataGridViewTextBoxColumn
             // 
             this.dateAbonnementClientDataGridViewTextBoxColumn.DataPropertyName = "dateAbonnementClient";
-            this.dateAbonnementClientDataGridViewTextBoxColumn.HeaderText = "dateAbonnementClient";
+            this.dateAbonnementClientDataGridViewTextBoxColumn.HeaderText = "Date Abonnement";
             this.dateAbonnementClientDataGridViewTextBoxColumn.Name = "dateAbonnementClientDataGridViewTextBoxColumn";
             this.dateAbonnementClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "login";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // clientTableAdapter
-            // 
-            this.clientTableAdapter.ClearBeforeFill = true;
             // 
             // validationCompte
             // 
@@ -253,10 +253,10 @@
         private System.Windows.Forms.BindingSource clientBindingSource;
         private PPE3_GABORIEAU_LAUGEREDataSet pPE3_GABORIEAU_LAUGEREDataSet;
         private PPE3_GABORIEAU_LAUGEREDataSetTableAdapters.clientTableAdapter clientTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailClientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomClientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenomClientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailClientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateAbonnementClientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
     }
 }

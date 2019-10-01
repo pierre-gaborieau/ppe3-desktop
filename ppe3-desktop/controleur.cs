@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ppe3_desktop.VUES.COMPTE;
 using System.Windows.Forms;
+using ppe3_desktop.VUES.COMPTE;
 
 namespace ppe3_desktop
 {
@@ -22,7 +22,13 @@ namespace ppe3_desktop
 
         private void ValidationComtpeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            allFalse();
+            validationCompte1.Visible = true;
+        }
 
+        private void allFalse()
+        {
+            validationCompte1.Visible = false;
         }
     }
 }

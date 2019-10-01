@@ -24,7 +24,15 @@ namespace ppe3_desktop
         {
             allFalse();
             validationCompte1.Visible = true;
-            validationCompte1.afficherPage(maConnexion.client.ToList());
+            List<client> listeSend = new List<client>();
+            foreach(client c in maConnexion.client.ToList())
+            {
+                if(c.actif == 0)
+                {
+                    listeSend.Add(c);
+                }
+            }
+            validationCompte1.afficherPage(listeSend);
         }
 
         private void allFalse()

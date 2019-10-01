@@ -30,5 +30,10 @@ namespace ppe3_desktop
         {
             validationCompte1.Visible = false;
         }
+
+        private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

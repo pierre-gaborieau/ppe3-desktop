@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TitleMovie = new System.Windows.Forms.TextBox();
             this.RealMovie = new System.Windows.Forms.TextBox();
             this.GenreBox = new System.Windows.Forms.ComboBox();
@@ -35,6 +36,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.AddMovie = new System.Windows.Forms.Button();
+            this.pPE3_GABORIEAU_LAUGEREDataSet = new ppe3_desktop.PPE3_GABORIEAU_LAUGEREDataSet();
+            this.supportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.supportTableAdapter = new ppe3_desktop.PPE3_GABORIEAU_LAUGEREDataSetTableAdapters.supportTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.pPE3_GABORIEAU_LAUGEREDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supportBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleMovie
@@ -95,6 +101,20 @@
             this.AddMovie.Text = "Ajouter";
             this.AddMovie.UseVisualStyleBackColor = true;
             // 
+            // pPE3_GABORIEAU_LAUGEREDataSet
+            // 
+            this.pPE3_GABORIEAU_LAUGEREDataSet.DataSetName = "PPE3_GABORIEAU_LAUGEREDataSet";
+            this.pPE3_GABORIEAU_LAUGEREDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // supportBindingSource
+            // 
+            this.supportBindingSource.DataMember = "support";
+            this.supportBindingSource.DataSource = this.pPE3_GABORIEAU_LAUGEREDataSet;
+            // 
+            // supportTableAdapter
+            // 
+            this.supportTableAdapter.ClearBeforeFill = true;
+            // 
             // AjouterFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -108,6 +128,8 @@
             this.Controls.Add(this.TitleMovie);
             this.Name = "AjouterFilm";
             this.Size = new System.Drawing.Size(972, 526);
+            ((System.ComponentModel.ISupportInitialize)(this.pPE3_GABORIEAU_LAUGEREDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supportBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,5 +144,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button AddMovie;
+        private System.Windows.Forms.BindingSource supportBindingSource;
+        private PPE3_GABORIEAU_LAUGEREDataSet pPE3_GABORIEAU_LAUGEREDataSet;
+        private PPE3_GABORIEAU_LAUGEREDataSetTableAdapters.supportTableAdapter supportTableAdapter;
     }
 }

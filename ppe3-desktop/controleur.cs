@@ -61,6 +61,24 @@ namespace ppe3_desktop
         private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             allFalse();
+
+            List<support> listeSupport = new List<support>();
+            List<genre> listeGenre = new List<genre>();
+            foreach (support c in maConnexion.support.ToList())
+            {
+                foreach (film f in maConnexion.film.ToList())
+                {
+                    if (c.idSupport == f.idFilm)
+                    {
+                        listeSupport.Add(c);
+                    }
+                }
+            }
+            foreach (genre g in maConnexion.genre.ToList())
+            {
+                listeGenre.Add(g);
+            }
+            ajouterFilm2.SendListe(listeSupport, listeGenre);
             ajouterFilm2.Visible = true;
         }
 

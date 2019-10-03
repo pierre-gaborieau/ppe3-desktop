@@ -50,6 +50,7 @@
             this.dateAbonnementClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientTableAdapter = new ppe3_desktop.PPE3_GABORIEAU_LAUGEREDataSetTableAdapters.clientTableAdapter();
             this.btn_activation = new System.Windows.Forms.Button();
+            this.btnFermetureCompte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
@@ -128,7 +129,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -230,10 +230,21 @@
             this.btn_activation.UseVisualStyleBackColor = true;
             this.btn_activation.Click += new System.EventHandler(this.Btn_activation_Click);
             // 
+            // btnFermetureCompte
+            // 
+            this.btnFermetureCompte.Location = new System.Drawing.Point(629, 244);
+            this.btnFermetureCompte.Name = "btnFermetureCompte";
+            this.btnFermetureCompte.Size = new System.Drawing.Size(179, 29);
+            this.btnFermetureCompte.TabIndex = 3;
+            this.btnFermetureCompte.Text = "Fermer le compte";
+            this.btnFermetureCompte.UseVisualStyleBackColor = true;
+            this.btnFermetureCompte.Click += new System.EventHandler(this.BtnFermetureCompte_Click);
+            // 
             // validationCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnFermetureCompte);
             this.Controls.Add(this.btn_activation);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bindingNavigator1);
@@ -272,5 +283,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prenomClientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateAbonnementClientDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btn_activation;
+        private System.Windows.Forms.Button btnFermetureCompte;
     }
 }

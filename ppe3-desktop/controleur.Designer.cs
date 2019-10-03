@@ -50,10 +50,11 @@
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterFilm2 = new ppe3_desktop.VUES.COMPOSANT.FILM.AjouterFilm();
-            this.modifierFilm1 = new ppe3_desktop.ModifierFilm();
-            this.validationCompte1 = new ppe3_desktop.VUES.COMPTE.validationCompte();
             this.verificationCompte1 = new ppe3_desktop.VUES.COMPTE.verificationCompte();
+            this.ajouterFilm2 = new ppe3_desktop.VUES.COMPOSANT.FILM.AjouterFilm();
+            this.validationCompte1 = new ppe3_desktop.VUES.COMPTE.validationCompte();
+            this.modifierFilm1 = new ppe3_desktop.ModifierFilm();
+            this.fermetureCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +95,8 @@
             // 
             this.compteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.validationComtpeToolStripMenuItem,
-            this.verificationCompteToolStripMenuItem});
+            this.verificationCompteToolStripMenuItem,
+            this.fermetureCompteToolStripMenuItem});
             this.compteToolStripMenuItem.Name = "compteToolStripMenuItem";
             this.compteToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.compteToolStripMenuItem.Text = "Compte";
@@ -104,14 +106,14 @@
             this.validationComtpeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.validationComtpeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.validationComtpeToolStripMenuItem.Name = "validationComtpeToolStripMenuItem";
-            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.validationComtpeToolStripMenuItem.Text = "Validation Compte";
             this.validationComtpeToolStripMenuItem.Click += new System.EventHandler(this.ValidationComtpeToolStripMenuItem_Click);
             // 
             // verificationCompteToolStripMenuItem
             // 
             this.verificationCompteToolStripMenuItem.Name = "verificationCompteToolStripMenuItem";
-            this.verificationCompteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.verificationCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verificationCompteToolStripMenuItem.Text = "Verification Compte";
             this.verificationCompteToolStripMenuItem.Click += new System.EventHandler(this.VerificationCompteToolStripMenuItem_Click);
             // 
@@ -265,6 +267,14 @@
             this.modifierToolStripMenuItem4.Size = new System.Drawing.Size(119, 22);
             this.modifierToolStripMenuItem4.Text = "Modifier";
             // 
+            // verificationCompte1
+            // 
+            this.verificationCompte1.Location = new System.Drawing.Point(0, 26);
+            this.verificationCompte1.Name = "verificationCompte1";
+            this.verificationCompte1.Size = new System.Drawing.Size(800, 424);
+            this.verificationCompte1.TabIndex = 7;
+            this.verificationCompte1.Visible = false;
+            // 
             // ajouterFilm2
             // 
             this.ajouterFilm2.Location = new System.Drawing.Point(1181, 777);
@@ -273,18 +283,6 @@
             this.ajouterFilm2.Size = new System.Drawing.Size(800, 427);
             this.ajouterFilm2.TabIndex = 5;
             this.ajouterFilm2.Visible = false;
-            // 
-            // modifierFilm1
-            // 
-            this.modifierFilm1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.modifierFilm1.Location = new System.Drawing.Point(0, 26);
-            this.modifierFilm1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.modifierFilm1.Name = "modifierFilm1";
-            this.modifierFilm1.Size = new System.Drawing.Size(800, 424);
-            this.modifierFilm1.TabIndex = 3;
-            this.modifierFilm1.Visible = false;
             // 
             // validationCompte1
             // 
@@ -298,13 +296,24 @@
             this.validationCompte1.TabIndex = 1;
             this.validationCompte1.Visible = false;
             // 
-            // verificationCompte1
+            // modifierFilm1
             // 
-            this.verificationCompte1.Location = new System.Drawing.Point(0, 26);
-            this.verificationCompte1.Name = "verificationCompte1";
-            this.verificationCompte1.Size = new System.Drawing.Size(800, 424);
-            this.verificationCompte1.TabIndex = 7;
-            this.verificationCompte1.Visible = false;
+            this.modifierFilm1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.modifierFilm1.Location = new System.Drawing.Point(0, 26);
+            this.modifierFilm1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.modifierFilm1.Name = "modifierFilm1";
+            this.modifierFilm1.Size = new System.Drawing.Size(800, 424);
+            this.modifierFilm1.TabIndex = 3;
+            this.modifierFilm1.Visible = false;
+            // 
+            // fermetureCompteToolStripMenuItem
+            // 
+            this.fermetureCompteToolStripMenuItem.Name = "fermetureCompteToolStripMenuItem";
+            this.fermetureCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fermetureCompteToolStripMenuItem.Text = "Fermeture Compte";
+            this.fermetureCompteToolStripMenuItem.Click += new System.EventHandler(this.FermetureCompteToolStripMenuItem_Click);
             // 
             // controleur
             // 
@@ -355,6 +364,7 @@
         private VUES.COMPOSANT.FILM.AjouterFilm ajouterFilm2;
         private System.Windows.Forms.ToolStripMenuItem verificationCompteToolStripMenuItem;
         private VUES.COMPTE.verificationCompte verificationCompte1;
+        private System.Windows.Forms.ToolStripMenuItem fermetureCompteToolStripMenuItem;
     }
 }
 

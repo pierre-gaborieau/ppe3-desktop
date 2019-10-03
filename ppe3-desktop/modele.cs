@@ -20,20 +20,27 @@ namespace ppe3_desktop
             return (listeSend);
         }
 
-        public static List<client> listeClientActif()
+        public static List<client> listeClientNonActif()
         {
             var listeSend = maConnexion.client.SqlQuery("SELECT * FROM client WHERE actif = 0").ToList();
 
             return (listeSend);
         }
 
-        public static void activationClient(client c)
+        public static List<client> listeCLientActif()
+        {
+            var listeSend = maConnexion.client.SqlQuery("SELECT * FROM client WHERE actif = 1").ToList();
+            return (listeSend);
+        }
+
+        public static void ChangerStatus(client c, int value)
         {
             using (var context = new connexionBase())
             {
-                int noOfRowUpdated = context.Database.ExecuteSqlCommand("Update client set actif=1 where idClient = @id", new SqlParameter("@id", c.idClient));
+                int noOfRowUpdated = context.Database.ExecuteSqlCommand("Update client set actif=@status where idClient = @id", new SqlParameter("@id", c.idClient), new SqlParameter("@status", value));
             }
         }
+
 
         public static void changerMdpClient(string mdp, string login)
         {

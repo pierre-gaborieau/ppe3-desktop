@@ -37,16 +37,16 @@ namespace ppe3_desktop
         {
             allFalse();
 
-            var listeSend = modele.listeClientActif();
+            var listeSend = modele.listeClientNonActif();
 
-            validationCompte1.afficherPage(listeSend);
+            validationCompte1.afficherPage(listeSend, "validation");
 
             validationCompte1.Visible = true;
         }
 
-        public void ActivationCompte(client c)
+        public void changerStatus(client c, int val)
         {
-            modele.activationClient(c);
+            modele.ChangerStatus(c, val);
             allFalse();
         }
 
@@ -63,6 +63,7 @@ namespace ppe3_desktop
             Console.WriteLine("Sent");
             allFalse();
         }
+
 
         private void allFalse()
         {
@@ -138,6 +139,13 @@ namespace ppe3_desktop
             allFalse();
             verificationCompte1.loadCombo(modele.listeClient());
             verificationCompte1.Visible = true;
+        }
+
+        private void FermetureCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            allFalse();
+            validationCompte1.afficherPage(modele.listeCLientActif(), "");
+            validationCompte1.Visible = true;
         }
     }
 }

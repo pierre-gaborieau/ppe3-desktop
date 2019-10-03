@@ -147,5 +147,10 @@ namespace ppe3_desktop
             validationCompte1.afficherPage(modele.listeCLientActif(), "");
             validationCompte1.Visible = true;
         }
+
+        private void CréerCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            allFalse();
+        }
     }
 }

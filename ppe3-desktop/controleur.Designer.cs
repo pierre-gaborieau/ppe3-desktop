@@ -50,17 +50,19 @@
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fermetureCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.créerCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verificationCompte1 = new ppe3_desktop.VUES.COMPTE.verificationCompte();
             this.ajouterFilm2 = new ppe3_desktop.VUES.COMPOSANT.FILM.AjouterFilm();
             this.validationCompte1 = new ppe3_desktop.VUES.COMPTE.validationCompte();
             this.modifierFilm1 = new ppe3_desktop.ModifierFilm();
-            this.fermetureCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creationCompte1 = new ppe3_desktop.VUES.COMPTE.creationCompte();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
@@ -77,17 +79,17 @@
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quitterToolStripMenuItem});
-            this.fichierToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.fichierToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.fichierToolStripMenuItem.Text = "Fichier ";
             // 
             // quitterToolStripMenuItem
             // 
-            this.quitterToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.quitterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.quitterToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.quitterToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
             // 
@@ -96,7 +98,8 @@
             this.compteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.validationComtpeToolStripMenuItem,
             this.verificationCompteToolStripMenuItem,
-            this.fermetureCompteToolStripMenuItem});
+            this.fermetureCompteToolStripMenuItem,
+            this.créerCompteToolStripMenuItem});
             this.compteToolStripMenuItem.Name = "compteToolStripMenuItem";
             this.compteToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.compteToolStripMenuItem.Text = "Compte";
@@ -125,147 +128,161 @@
             this.serieToolStripMenuItem,
             this.saisonToolStripMenuItem,
             this.clientToolStripMenuItem});
-            this.composantsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.composantsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.composantsToolStripMenuItem.Name = "composantsToolStripMenuItem";
             this.composantsToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.composantsToolStripMenuItem.Text = "Composants";
             // 
             // genreToolStripMenuItem
             // 
-            this.genreToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.genreToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.genreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem,
             this.modifierToolStripMenuItem});
-            this.genreToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.genreToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.genreToolStripMenuItem.Name = "genreToolStripMenuItem";
-            this.genreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.genreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.genreToolStripMenuItem.Text = "Genre";
             // 
             // ajouterToolStripMenuItem
             // 
-            this.ajouterToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.ajouterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ajouterToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.ajouterToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             // 
             // modifierToolStripMenuItem
             // 
-            this.modifierToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.modifierToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.modifierToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.modifierToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modifierToolStripMenuItem.Text = "Modifier";
             // 
             // filmToolStripMenuItem
             // 
-            this.filmToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.filmToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.filmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem1,
             this.modifierToolStripMenuItem1});
-            this.filmToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.filmToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.filmToolStripMenuItem.Name = "filmToolStripMenuItem";
-            this.filmToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.filmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.filmToolStripMenuItem.Text = "Film";
             // 
             // ajouterToolStripMenuItem1
             // 
-            this.ajouterToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.ajouterToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.ajouterToolStripMenuItem1.BackColor = System.Drawing.SystemColors.Control;
+            this.ajouterToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
             this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
-            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.ajouterToolStripMenuItem1.Text = "Ajouter";
             this.ajouterToolStripMenuItem1.Click += new System.EventHandler(this.ajouterToolStripMenuItem1_Click);
             // 
             // modifierToolStripMenuItem1
             // 
-            this.modifierToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.modifierToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.modifierToolStripMenuItem1.BackColor = System.Drawing.SystemColors.Control;
+            this.modifierToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
             this.modifierToolStripMenuItem1.Name = "modifierToolStripMenuItem1";
-            this.modifierToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.modifierToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.modifierToolStripMenuItem1.Text = "Modifier";
             this.modifierToolStripMenuItem1.Click += new System.EventHandler(this.modifierToolStripMenuItem1_Click);
             // 
             // serieToolStripMenuItem
             // 
-            this.serieToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.serieToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.serieToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem2,
             this.modifierToolStripMenuItem2});
-            this.serieToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.serieToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.serieToolStripMenuItem.Name = "serieToolStripMenuItem";
-            this.serieToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.serieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.serieToolStripMenuItem.Text = "Serie";
             // 
             // ajouterToolStripMenuItem2
             // 
-            this.ajouterToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.ajouterToolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.ajouterToolStripMenuItem2.BackColor = System.Drawing.SystemColors.Control;
+            this.ajouterToolStripMenuItem2.ForeColor = System.Drawing.Color.Black;
             this.ajouterToolStripMenuItem2.Name = "ajouterToolStripMenuItem2";
-            this.ajouterToolStripMenuItem2.Size = new System.Drawing.Size(119, 22);
+            this.ajouterToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.ajouterToolStripMenuItem2.Text = "Ajouter";
             // 
             // modifierToolStripMenuItem2
             // 
-            this.modifierToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.modifierToolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.modifierToolStripMenuItem2.BackColor = System.Drawing.SystemColors.Control;
+            this.modifierToolStripMenuItem2.ForeColor = System.Drawing.Color.Black;
             this.modifierToolStripMenuItem2.Name = "modifierToolStripMenuItem2";
-            this.modifierToolStripMenuItem2.Size = new System.Drawing.Size(119, 22);
+            this.modifierToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.modifierToolStripMenuItem2.Text = "Modifier";
             // 
             // saisonToolStripMenuItem
             // 
-            this.saisonToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.saisonToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.saisonToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem3,
             this.modifierToolStripMenuItem3});
-            this.saisonToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.saisonToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.saisonToolStripMenuItem.Name = "saisonToolStripMenuItem";
-            this.saisonToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.saisonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saisonToolStripMenuItem.Text = "Saison";
             // 
             // ajouterToolStripMenuItem3
             // 
-            this.ajouterToolStripMenuItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.ajouterToolStripMenuItem3.ForeColor = System.Drawing.Color.White;
+            this.ajouterToolStripMenuItem3.BackColor = System.Drawing.SystemColors.Control;
+            this.ajouterToolStripMenuItem3.ForeColor = System.Drawing.Color.Black;
             this.ajouterToolStripMenuItem3.Name = "ajouterToolStripMenuItem3";
-            this.ajouterToolStripMenuItem3.Size = new System.Drawing.Size(119, 22);
+            this.ajouterToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.ajouterToolStripMenuItem3.Text = "Ajouter";
             // 
             // modifierToolStripMenuItem3
             // 
-            this.modifierToolStripMenuItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.modifierToolStripMenuItem3.ForeColor = System.Drawing.Color.White;
+            this.modifierToolStripMenuItem3.BackColor = System.Drawing.SystemColors.Control;
+            this.modifierToolStripMenuItem3.ForeColor = System.Drawing.Color.Black;
             this.modifierToolStripMenuItem3.Name = "modifierToolStripMenuItem3";
-            this.modifierToolStripMenuItem3.Size = new System.Drawing.Size(119, 22);
+            this.modifierToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.modifierToolStripMenuItem3.Text = "Modifier";
             // 
             // clientToolStripMenuItem
             // 
-            this.clientToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.clientToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.clientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem4,
             this.modifierToolStripMenuItem4});
-            this.clientToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.clientToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientToolStripMenuItem.Text = "Client";
             // 
             // ajouterToolStripMenuItem4
             // 
-            this.ajouterToolStripMenuItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.ajouterToolStripMenuItem4.ForeColor = System.Drawing.Color.White;
+            this.ajouterToolStripMenuItem4.BackColor = System.Drawing.SystemColors.Control;
+            this.ajouterToolStripMenuItem4.ForeColor = System.Drawing.Color.Black;
             this.ajouterToolStripMenuItem4.Name = "ajouterToolStripMenuItem4";
-            this.ajouterToolStripMenuItem4.Size = new System.Drawing.Size(119, 22);
+            this.ajouterToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.ajouterToolStripMenuItem4.Text = "Ajouter";
             // 
             // modifierToolStripMenuItem4
             // 
-            this.modifierToolStripMenuItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.modifierToolStripMenuItem4.ForeColor = System.Drawing.Color.White;
+            this.modifierToolStripMenuItem4.BackColor = System.Drawing.SystemColors.Control;
+            this.modifierToolStripMenuItem4.ForeColor = System.Drawing.Color.Black;
             this.modifierToolStripMenuItem4.Name = "modifierToolStripMenuItem4";
-            this.modifierToolStripMenuItem4.Size = new System.Drawing.Size(119, 22);
+            this.modifierToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.modifierToolStripMenuItem4.Text = "Modifier";
+            // 
+            // fermetureCompteToolStripMenuItem
+            // 
+            this.fermetureCompteToolStripMenuItem.Name = "fermetureCompteToolStripMenuItem";
+            this.fermetureCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fermetureCompteToolStripMenuItem.Text = "Fermeture Compte";
+            this.fermetureCompteToolStripMenuItem.Click += new System.EventHandler(this.FermetureCompteToolStripMenuItem_Click);
+            // 
+            // créerCompteToolStripMenuItem
+            // 
+            this.créerCompteToolStripMenuItem.Name = "créerCompteToolStripMenuItem";
+            this.créerCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.créerCompteToolStripMenuItem.Text = "Créer Compte";
+            this.créerCompteToolStripMenuItem.Click += new System.EventHandler(this.CréerCompteToolStripMenuItem_Click);
             // 
             // verificationCompte1
             // 
@@ -308,18 +325,19 @@
             this.modifierFilm1.TabIndex = 3;
             this.modifierFilm1.Visible = false;
             // 
-            // fermetureCompteToolStripMenuItem
+            // creationCompte1
             // 
-            this.fermetureCompteToolStripMenuItem.Name = "fermetureCompteToolStripMenuItem";
-            this.fermetureCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fermetureCompteToolStripMenuItem.Text = "Fermeture Compte";
-            this.fermetureCompteToolStripMenuItem.Click += new System.EventHandler(this.FermetureCompteToolStripMenuItem_Click);
+            this.creationCompte1.Location = new System.Drawing.Point(0, 22);
+            this.creationCompte1.Name = "creationCompte1";
+            this.creationCompte1.Size = new System.Drawing.Size(800, 428);
+            this.creationCompte1.TabIndex = 8;
             // 
             // controleur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.creationCompte1);
             this.Controls.Add(this.verificationCompte1);
             this.Controls.Add(this.ajouterFilm2);
             this.Controls.Add(this.menuStrip1);
@@ -365,6 +383,8 @@
         private System.Windows.Forms.ToolStripMenuItem verificationCompteToolStripMenuItem;
         private VUES.COMPTE.verificationCompte verificationCompte1;
         private System.Windows.Forms.ToolStripMenuItem fermetureCompteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem créerCompteToolStripMenuItem;
+        private VUES.COMPTE.creationCompte creationCompte1;
     }
 }
 

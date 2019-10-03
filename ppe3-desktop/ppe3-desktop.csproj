@@ -138,6 +138,12 @@
     <Compile Include="VUES\COMPOSANT\FILM\AjouterFilm.Designer.cs">
       <DependentUpon>AjouterFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VUES\COMPTE\creationCompte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VUES\COMPTE\creationCompte.Designer.cs">
+      <DependentUpon>creationCompte.cs</DependentUpon>
+    </Compile>
     <Compile Include="VUES\COMPTE\validationCompte.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </Compile>
     <EmbeddedResource Include="VUES\COMPOSANT\FILM\AjouterFilm.resx">
       <DependentUpon>AjouterFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VUES\COMPTE\creationCompte.resx">
+      <DependentUpon>creationCompte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VUES\COMPTE\validationCompte.resx">
       <DependentUpon>validationCompte.cs</DependentUpon>

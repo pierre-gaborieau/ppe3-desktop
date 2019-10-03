@@ -261,6 +261,7 @@
             this.ajouterToolStripMenuItem4.Name = "ajouterToolStripMenuItem4";
             this.ajouterToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.ajouterToolStripMenuItem4.Text = "Ajouter";
+            this.ajouterToolStripMenuItem4.Click += new System.EventHandler(this.CréerCompteToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem4
             // 

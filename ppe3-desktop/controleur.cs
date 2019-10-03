@@ -71,6 +71,7 @@ namespace ppe3_desktop
             verificationCompte1.Visible = false;
             ajouterFilm2.Visible = false;
             modifierFilm1.Visible = false;
+            creationCompte1.Visible = false;
         }
 
         private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,6 +152,7 @@ namespace ppe3_desktop
         private void CréerCompteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             allFalse();
+            creationCompte1.Visible = true;
         }
     }
 }

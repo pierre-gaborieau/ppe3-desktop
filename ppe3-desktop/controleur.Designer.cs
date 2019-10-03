@@ -52,7 +52,6 @@
             this.ajouterFilm2 = new ppe3_desktop.VUES.COMPOSANT.FILM.AjouterFilm();
             this.modifierFilm1 = new ppe3_desktop.ModifierFilm();
             this.validationCompte1 = new ppe3_desktop.VUES.COMPTE.validationCompte();
-            this.ajouterFilm2 = new ppe3_desktop.VUES.COMPOSANT.FILM.AjouterFilm();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +66,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -85,7 +84,7 @@
             this.quitterToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.quitterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
             // 
@@ -102,7 +101,7 @@
             this.validationComtpeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.validationComtpeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.validationComtpeToolStripMenuItem.Name = "validationComtpeToolStripMenuItem";
-            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.validationComtpeToolStripMenuItem.Text = "Validation Compte";
             this.validationComtpeToolStripMenuItem.Click += new System.EventHandler(this.ValidationComtpeToolStripMenuItem_Click);
             // 
@@ -127,7 +126,7 @@
             this.modifierToolStripMenuItem});
             this.genreToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.genreToolStripMenuItem.Name = "genreToolStripMenuItem";
-            this.genreToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.genreToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.genreToolStripMenuItem.Text = "Genre";
             // 
             // ajouterToolStripMenuItem
@@ -154,7 +153,7 @@
             this.modifierToolStripMenuItem1});
             this.filmToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.filmToolStripMenuItem.Name = "filmToolStripMenuItem";
-            this.filmToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.filmToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.filmToolStripMenuItem.Text = "Film";
             // 
             // ajouterToolStripMenuItem1
@@ -183,7 +182,7 @@
             this.modifierToolStripMenuItem2});
             this.serieToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.serieToolStripMenuItem.Name = "serieToolStripMenuItem";
-            this.serieToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.serieToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.serieToolStripMenuItem.Text = "Serie";
             // 
             // ajouterToolStripMenuItem2
@@ -210,7 +209,7 @@
             this.modifierToolStripMenuItem3});
             this.saisonToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.saisonToolStripMenuItem.Name = "saisonToolStripMenuItem";
-            this.saisonToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.saisonToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.saisonToolStripMenuItem.Text = "Saison";
             // 
             // ajouterToolStripMenuItem3
@@ -237,7 +236,7 @@
             this.modifierToolStripMenuItem4});
             this.clientToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.clientToolStripMenuItem.Text = "Client";
             // 
             // ajouterToolStripMenuItem4
@@ -245,7 +244,7 @@
             this.ajouterToolStripMenuItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ajouterToolStripMenuItem4.ForeColor = System.Drawing.Color.White;
             this.ajouterToolStripMenuItem4.Name = "ajouterToolStripMenuItem4";
-            this.ajouterToolStripMenuItem4.Size = new System.Drawing.Size(149, 26);
+            this.ajouterToolStripMenuItem4.Size = new System.Drawing.Size(119, 22);
             this.ajouterToolStripMenuItem4.Text = "Ajouter";
             // 
             // modifierToolStripMenuItem4
@@ -253,14 +252,15 @@
             this.modifierToolStripMenuItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.modifierToolStripMenuItem4.ForeColor = System.Drawing.Color.White;
             this.modifierToolStripMenuItem4.Name = "modifierToolStripMenuItem4";
-            this.modifierToolStripMenuItem4.Size = new System.Drawing.Size(149, 26);
+            this.modifierToolStripMenuItem4.Size = new System.Drawing.Size(119, 22);
             this.modifierToolStripMenuItem4.Text = "Modifier";
             // 
             // ajouterFilm2
             // 
-            this.ajouterFilm2.Location = new System.Drawing.Point(0, 34);
+            this.ajouterFilm2.Location = new System.Drawing.Point(1181, 777);
+            this.ajouterFilm2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ajouterFilm2.Name = "ajouterFilm2";
-            this.ajouterFilm2.Size = new System.Drawing.Size(1067, 526);
+            this.ajouterFilm2.Size = new System.Drawing.Size(800, 427);
             this.ajouterFilm2.TabIndex = 5;
             this.ajouterFilm2.Visible = false;
             // 
@@ -269,7 +269,7 @@
             this.modifierFilm1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.modifierFilm1.Location = new System.Drawing.Point(0, 28);
+            this.modifierFilm1.Location = new System.Drawing.Point(0, 26);
             this.modifierFilm1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.modifierFilm1.Name = "modifierFilm1";
             this.modifierFilm1.Size = new System.Drawing.Size(800, 424);
@@ -282,26 +282,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.validationCompte1.Location = new System.Drawing.Point(0, 28);
-            this.validationCompte1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.validationCompte1.Margin = new System.Windows.Forms.Padding(4);
             this.validationCompte1.Name = "validationCompte1";
             this.validationCompte1.Size = new System.Drawing.Size(800, 422);
             this.validationCompte1.TabIndex = 1;
             this.validationCompte1.Visible = false;
-            // 
-            // ajouterFilm2
-            // 
-            this.ajouterFilm2.Location = new System.Drawing.Point(0, 34);
-            this.ajouterFilm2.Name = "ajouterFilm2";
-            this.ajouterFilm2.Size = new System.Drawing.Size(1067, 526);
-            this.ajouterFilm2.TabIndex = 5;
-            this.ajouterFilm2.Visible = false;
             // 
             // controleur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.verificationCompte1);
             this.Controls.Add(this.ajouterFilm2);
             this.Controls.Add(this.modifierFilm1);
             this.Controls.Add(this.validationCompte1);
@@ -325,7 +316,6 @@
         private System.Windows.Forms.ToolStripMenuItem compteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validationComtpeToolStripMenuItem;
         private VUES.COMPTE.validationCompte validationCompte1;
-        private VUES.COMPOSANT.FILM.AjouterFilm ajouterFilm1;
         private System.Windows.Forms.ToolStripMenuItem composantsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem genreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;

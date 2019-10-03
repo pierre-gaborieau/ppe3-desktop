@@ -33,10 +33,25 @@ namespace ppe3_desktop.VUES.COMPOSANT.FILM
 
         private void AddMovie_Click(object sender, EventArgs e)
         {
-            if(TitleMovie.Text != null && RealMovie.Text != null && GenreBox.SelectedIndex != 0 && imageName.Text != null && duree.Text != null)
+            if(TitleMovie.Text != null && RealMovie.Text != null && GenreBox.SelectedIndex != 0 && imageName.Text != null)
             {
-                ((controleur)(this.Parent)).AjouterFilm(lesFilms, TitleMovie.Text, RealMovie.Text, GenreBox.SelectedIndex, imageName.Text, duree.Text);
+                int idSupport = LastSupportId();
+
+                ((controleur)(this.Parent)).AjouterSupport(idSupport, TitleMovie.Text, RealMovie.Text, imageName.Text, GenreBox.SelectedIndex);
             }
+        }
+
+        private int LastSupportId()
+        {
+            int vRetour = 0;
+            foreach(support s in lesFilms)
+            {
+                if(s.idSupport > vRetour)
+                {
+                    vRetour = s.idSupport;
+                }
+            }
+            return vRetour;
         }
     }
 }

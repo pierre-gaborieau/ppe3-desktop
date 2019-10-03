@@ -78,7 +78,7 @@ namespace ppe3_desktop
         private void allFalse()
         {
             validationCompte1.Visible = false;
-            ajouterFilm2.Visible = false;
+            ajouterFilm1.Visible = false;
             modifierFilm1.Visible = false;
         }
 
@@ -107,8 +107,8 @@ namespace ppe3_desktop
             {
                 listeGenre.Add(g);
             }
-            ajouterFilm2.SendListe(listeSupport, listeGenre);
-            ajouterFilm2.Visible = true;
+            ajouterFilm1.SendListe(listeSupport, listeGenre);
+            ajouterFilm1.Visible = true;
         }
 
         private void modifierToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -137,6 +137,13 @@ namespace ppe3_desktop
             {
                 int noOfRowUpdated = context.Database.ExecuteSqlCommand("INSERT INTO support (titreSupport, realisateur, image, idGenre) VALUES ('"+ leTitreSupport + "', '"+ leRealisateur + "', '"+ imageSupport + ".jpg', '"+ idGenre + "')");
                 DialogResult Message = MessageBox.Show("Le film a été correctement enregistré", "", MessageBoxButtons.OK);
+                foreach(support s in maConnexion.support.ToList())
+                {
+                    if(s.titreSupport == leTitreSupport)
+                    {
+                        DialogResult test = MessageBox.Show(s.idSupport.ToString(), "", MessageBoxButtons.OK);
+                    }
+                }
             }
 
 

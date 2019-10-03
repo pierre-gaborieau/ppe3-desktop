@@ -11,13 +11,17 @@ using System.Windows.Forms;
 using ppe3_desktop.VUES.COMPTE;
 using ppe3_desktop.VUES.COMPOSANT;
 using System.Data.SqlClient;
+
+#region à supprimer 
 using System.Net.Mail;
 using System.Net;
+#endregion
 
 namespace ppe3_desktop
 {
     public partial class controleur : Form
     {
+        #region global
         public connexionBase maConnexion = new connexionBase();
         public controleur()
         {
@@ -25,10 +29,45 @@ namespace ppe3_desktop
            
         }
 
+        private void allFalse()
+        {
+            validationCompte1.Visible = false;
+            verificationCompte1.Visible = false;
+            ajouterFilm2.Visible = false;
+            modifierFilm1.Visible = false;
+            creationCompte1.Visible = false;
+        }
+
+        private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region Compte
+        private void VerificationCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            allFalse();
+            verificationCompte1.loadCombo(modele.listeClient());
+            verificationCompte1.Visible = true;
+        }
+
+        private void FermetureCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            allFalse();
+            validationCompte1.afficherPage(modele.listeCLientActif(), "");
+            validationCompte1.Visible = true;
+        }
+
+        private void CréerCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            allFalse();
+            creationCompte1.Visible = true;
+        }
         private void VeriificationCompteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             allFalse();
-            var listeSend = maConnexion.client.SqlQuery("SELECT * FROM client").ToList();
+            var listeSend = modele.listeClient();
 
             verificationCompte1.loadCombo(listeSend);
         }
@@ -37,33 +76,22 @@ namespace ppe3_desktop
         {
             allFalse();
 
-            var listeSend = maConnexion.client.SqlQuery("SELECT * FROM client WHERE actif = 0").ToList();
+            var listeSend = modele.listeClientNonActif();
 
-            validationCompte1.afficherPage(listeSend);
+            validationCompte1.afficherPage(listeSend, "validation");
 
             validationCompte1.Visible = true;
         }
 
-        public void ActivationCompte(client c)
+        public void changerStatus(client c, int val)
         {
-
-            using (var context = new connexionBase())
-            {
-                int noOfRowUpdated = context.Database.ExecuteSqlCommand("Update client set actif=1 where idClient = @id", new SqlParameter("@id", c.idClient));
-            }
-
-
-
+            modele.ChangerStatus(c, val);
             allFalse();
-
         }
 
         internal void ChangementMotDePasse(string login, string mdp)
         {
-            using (var context = new connexionBase())
-            {
-                int noOfRowUpdated = context.Database.ExecuteSqlCommand("Update client set pwd=@pw where login = @login", new SqlParameter("@pw", mdp), new SqlParameter("@login", login));
-            }
+            modele.changerMdpClient(mdp, login);
 
             var client = new SmtpClient("smtp.gmail.com", 587)
             {
@@ -74,18 +102,9 @@ namespace ppe3_desktop
             Console.WriteLine("Sent");
             allFalse();
         }
+        #endregion
 
-        private void allFalse()
-        {
-            validationCompte1.Visible = false;
-            ajouterFilm1.Visible = false;
-            modifierFilm1.Visible = false;
-        }
-
-        private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -107,8 +126,8 @@ namespace ppe3_desktop
             {
                 listeGenre.Add(g);
             }
-            ajouterFilm1.SendListe(listeSupport, listeGenre);
-            ajouterFilm1.Visible = true;
+            ajouterFilm2.SendListe(listeSupport, listeGenre);
+            ajouterFilm2.Visible = true;
         }
 
         private void modifierToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -137,13 +156,6 @@ namespace ppe3_desktop
             {
                 int noOfRowUpdated = context.Database.ExecuteSqlCommand("INSERT INTO support (titreSupport, realisateur, image, idGenre) VALUES ('"+ leTitreSupport + "', '"+ leRealisateur + "', '"+ imageSupport + ".jpg', '"+ idGenre + "')");
                 DialogResult Message = MessageBox.Show("Le film a été correctement enregistré", "", MessageBoxButtons.OK);
-                foreach(support s in maConnexion.support.ToList())
-                {
-                    if(s.titreSupport == leTitreSupport)
-                    {
-                        DialogResult test = MessageBox.Show(s.idSupport.ToString(), "", MessageBoxButtons.OK);
-                    }
-                }
             }
 
 

@@ -28,7 +28,7 @@ namespace ppe3_desktop
         private void VeriificationCompteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             allFalse();
-            var listeSend = maConnexion.client.SqlQuery("SELECT * FROM client").ToList();
+            var listeSend = modele.listeClient();
 
             verificationCompte1.loadCombo(listeSend);
         }

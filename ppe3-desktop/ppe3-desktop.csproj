@@ -76,6 +76,7 @@
     <Compile Include="genre.cs">
       <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
     </Compile>
+    <Compile Include="modele.cs" />
     <Compile Include="SquelettedDesDonnées1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

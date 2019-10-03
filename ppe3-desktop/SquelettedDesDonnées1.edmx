@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="modelLocal.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="client">
           <Key>
             <PropertyRef Name="idClient" />
@@ -79,6 +79,16 @@
           <Property Name="realisateur" Type="char" MaxLength="60" Nullable="false" />
           <Property Name="image" Type="char" MaxLength="30" Nullable="false" />
           <Property Name="idGenre" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="fk_emprunt_client">
           <End Role="client" Type="Self.client" Multiplicity="1" />
@@ -166,7 +176,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="modelStoreContainer">
+        <EntityContainer Name="modelLocalStoreContainer">
           <EntitySet Name="client" EntityType="Self.client" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="emprunt" EntityType="Self.emprunt" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="episode" EntityType="Self.episode" Schema="dbo" store:Type="Tables" />
@@ -175,6 +185,7 @@
           <EntitySet Name="saison" EntityType="Self.saison" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="serie" EntityType="Self.serie" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="support" EntityType="Self.support" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="fk_emprunt_client" Association="Self.fk_emprunt_client">
             <End Role="client" EntitySet="client" />
             <End Role="emprunt" EntitySet="emprunt" />
@@ -298,6 +309,16 @@
           <NavigationProperty Name="genre" Relationship="Self.fk_support_genre" FromRole="support" ToRole="genre" />
           <NavigationProperty Name="serie" Relationship="Self.fk_serie_support" FromRole="support" ToRole="serie" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <Association Name="fk_emprunt_client">
           <End Role="client" Type="Self.client" Multiplicity="1" />
           <End Role="emprunt" Type="Self.emprunt" Multiplicity="*" />
@@ -384,7 +405,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="connexionBasesssss" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="connexionBase" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="client" EntityType="Self.client" />
           <EntitySet Name="emprunt" EntityType="Self.emprunt" />
           <EntitySet Name="episode" EntityType="Self.episode" />
@@ -393,6 +414,7 @@
           <EntitySet Name="saison" EntityType="Self.saison" />
           <EntitySet Name="serie" EntityType="Self.serie" />
           <EntitySet Name="support" EntityType="Self.support" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <AssociationSet Name="fk_emprunt_client" Association="Self.fk_emprunt_client">
             <End Role="client" EntitySet="client" />
             <End Role="emprunt" EntitySet="emprunt" />
@@ -427,7 +449,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="modelStoreContainer" CdmEntityContainer="connexionBasesssss">
+        <EntityContainerMapping StorageEntityContainer="modelLocalStoreContainer" CdmEntityContainer="connexionBase">
           <EntitySetMapping Name="client">
             <EntityTypeMapping TypeName="model.client">
               <MappingFragment StoreEntitySet="client">
@@ -505,6 +527,17 @@
                 <ScalarProperty Name="realisateur" ColumnName="realisateur" />
                 <ScalarProperty Name="image" ColumnName="image" />
                 <ScalarProperty Name="idGenre" ColumnName="idGenre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

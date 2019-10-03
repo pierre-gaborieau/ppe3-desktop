@@ -13,10 +13,10 @@ namespace ppe3_desktop
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class connexionBasesssss : DbContext
+    public partial class connexionBase : DbContext
     {
-        public connexionBasesssss()
-            : base("name=connexionBasesssss")
+        public connexionBase()
+            : base("name=connexionBase")
         {
         }
     
@@ -33,5 +33,6 @@ namespace ppe3_desktop
         public virtual DbSet<saison> saison { get; set; }
         public virtual DbSet<serie> serie { get; set; }
         public virtual DbSet<support> support { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

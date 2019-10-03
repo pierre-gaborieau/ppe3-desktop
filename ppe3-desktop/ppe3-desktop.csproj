@@ -56,16 +56,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="client.cs">
-      <DependentUpon>SqueletteDesDonnées.tt</DependentUpon>
+      <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
     </Compile>
     <Compile Include="emprunt.cs">
-      <DependentUpon>SqueletteDesDonnées.tt</DependentUpon>
+      <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
     </Compile>
     <Compile Include="episode.cs">
-      <DependentUpon>SqueletteDesDonnées.tt</DependentUpon>
+      <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
     </Compile>
     <Compile Include="film.cs">
-      <DependentUpon>SqueletteDesDonnées.tt</DependentUpon>
+      <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
     </Compile>
     <Compile Include="controleur.cs">
       <SubType>Form</SubType>
@@ -74,7 +74,25 @@
       <DependentUpon>controleur.cs</DependentUpon>
     </Compile>
     <Compile Include="genre.cs">
-      <DependentUpon>SqueletteDesDonnées.tt</DependentUpon>
+      <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SquelettedDesDonnées1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SquelettedDesDonnées1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SquelettedDesDonnées1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SquelettedDesDonnées1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SquelettedDesDonnées1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
     </Compile>
     <Compile Include="VUES\COMPOSANT\FILM\ModifierFilm.cs">
       <SubType>UserControl</SubType>
@@ -90,10 +108,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="saison.cs">
-      <DependentUpon>SqueletteDesDonnées.tt</DependentUpon>
+      <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
     </Compile>
     <Compile Include="serie.cs">
-      <DependentUpon>SqueletteDesDonnées.tt</DependentUpon>
+      <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
     </Compile>
     <Compile Include="SqueletteDesDonnées.Context.cs">
       <AutoGen>True</AutoGen>
@@ -111,7 +129,7 @@
       <DependentUpon>SqueletteDesDonnées.edmx</DependentUpon>
     </Compile>
     <Compile Include="support.cs">
-      <DependentUpon>SqueletteDesDonnées.tt</DependentUpon>
+      <DependentUpon>SquelettedDesDonnées1.tt</DependentUpon>
     </Compile>
     <Compile Include="VUES\COMPOSANT\FILM\AjouterFilm.cs">
       <SubType>UserControl</SubType>
@@ -180,6 +198,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SqueletteDesDonnées.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="SquelettedDesDonnées1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SquelettedDesDonnées1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SquelettedDesDonnées1.edmx.diagram">
+      <DependentUpon>SquelettedDesDonnées1.edmx</DependentUpon>
+    </None>
     <None Include="SqueletteDesDonnées.edmx.diagram">
       <DependentUpon>SqueletteDesDonnées.edmx</DependentUpon>
     </None>
@@ -188,6 +213,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SquelettedDesDonnées1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SquelettedDesDonnées1.edmx</DependentUpon>
+      <LastGenOutput>SquelettedDesDonnées1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SquelettedDesDonnées1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SquelettedDesDonnées1.edmx</DependentUpon>
+      <LastGenOutput>SquelettedDesDonnées1.cs</LastGenOutput>
+    </Content>
     <Content Include="SqueletteDesDonnées.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SqueletteDesDonnées.Context.cs</LastGenOutput>

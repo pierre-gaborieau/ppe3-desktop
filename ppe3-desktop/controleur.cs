@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
+using System.Net;
 
 using ppe3_desktop.VUES.COMPTE;
 using ppe3_desktop.VUES.COMPOSANT;
 using System.Data.SqlClient;
 
 #region à supprimer 
-using System.Net.Mail;
-using System.Net;
 #endregion
 
 namespace ppe3_desktop
@@ -26,7 +26,6 @@ namespace ppe3_desktop
         public controleur()
         {
             InitializeComponent();
-           
         }
 
         private void allFalse()
@@ -42,6 +41,30 @@ namespace ppe3_desktop
         {
             this.Close();
         }
+
+
+        public static void Email(string sujet, string contenu, string email)
+        {
+            try
+            {
+                MailMessage message = new MailMessage();
+                SmtpClient smtp = new SmtpClient();
+                message.From = new MailAddress("ppe3videotheque@gmail.com");
+                message.To.Add(new MailAddress(email));
+                message.Subject = sujet;
+                message.IsBodyHtml = true; //to make message body as html  
+                message.Body = contenu;
+                smtp.Port = 587;
+                smtp.Host = "smtp.gmail.com"; //for gmail host  
+                smtp.EnableSsl = true;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential("ppe3videotheque@gmail.com", "Password2019!");
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.Send(message);
+            }
+            catch (Exception) { }
+        }
+
         #endregion
 
         #region Compte
@@ -64,13 +87,6 @@ namespace ppe3_desktop
             allFalse();
             creationCompte1.Visible = true;
         }
-        private void VeriificationCompteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            allFalse();
-            var listeSend = modele.listeClient();
-
-            verificationCompte1.loadCombo(listeSend);
-        }
 
         private void ValidationComtpeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -89,17 +105,12 @@ namespace ppe3_desktop
             allFalse();
         }
 
-        internal void ChangementMotDePasse(string login, string mdp)
+        internal void ChangementMotDePasse(string login, string mdp, string email)
         {
             modele.changerMdpClient(mdp, login);
+            string contenuMail = "Votre mot de passe à été changé suite à votre demande. \nIl est maintenant : " + mdp + " .";
 
-            var client = new SmtpClient("smtp.gmail.com", 587)
-            {
-                Credentials = new NetworkCredential("ppe3videotheque@gmail.com", "Password2019!"),
-                EnableSsl = true
-            };
-            client.Send("ppe3videotheque@gmail.com", "ppe3videotheque@gmail.com", "test", "testbody");
-            Console.WriteLine("Sent");
+            Email("Changement de mot de passe", contenuMail, email);
             allFalse();
         }
         #endregion

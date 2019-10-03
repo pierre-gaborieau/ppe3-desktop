@@ -12,6 +12,8 @@ namespace ppe3_desktop.VUES.COMPTE
 {
     public partial class verificationCompte : UserControl
     {
+        client clientCourant = new client();
+        string email;
         public verificationCompte()
         {
             InitializeComponent();
@@ -34,16 +36,24 @@ namespace ppe3_desktop.VUES.COMPTE
 
         private void Btn_ok_Click(object sender, EventArgs e)
         {
+            var lesClients = modele.listeClient();
             p_selection.Visible = false;
             p_modifmdp.Visible = true;
 
+            foreach(client c in lesClients)
+            {
+                if(c == cb_client.SelectedItem)
+                {
+                    email = c.emailClient;
+                }
+            }
         }
 
         private void Btn_valider_Click(object sender, EventArgs e)
         {
             if(txt_mdp.Text == txt_mdp2.Text && txt_mdp.Text.Length > 8)
             {
-                ((controleur)(this.Parent)).ChangementMotDePasse(cb_client.Text, txt_mdp.Text);
+                ((controleur)(this.Parent)).ChangementMotDePasse(cb_client.Text, txt_mdp.Text, email);
                 
                 this.Visible = false;
                 lbl_error.Visible = false;

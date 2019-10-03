@@ -24,6 +24,9 @@ namespace ppe3_desktop.VUES.COMPTE
                 string email = txt_mail_a.Text + "@" + txt_mail_b.Text + "." + txt_mail_c.Text;
                 lbl_error.Visible = false;
                 modele.creerClient(email, txt_nom.Text, txt_prenom.Text, txt_login.Text, txt_pw.Text, chk_Cheque.Checked);
+                string contenu = "Bonjour, nous vous confirmons la création de votre compte à la vidéothèque. Vous pouvez maintenant accéder au site web.";
+                controleur.Email("Nouveau Compte", contenu, email);
+                this.Visible = false;
             }
             else
             {

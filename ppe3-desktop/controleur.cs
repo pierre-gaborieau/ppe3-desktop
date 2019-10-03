@@ -11,13 +11,17 @@ using System.Windows.Forms;
 using ppe3_desktop.VUES.COMPTE;
 using ppe3_desktop.VUES.COMPOSANT;
 using System.Data.SqlClient;
+
+#region à supprimer 
 using System.Net.Mail;
 using System.Net;
+#endregion
 
 namespace ppe3_desktop
 {
     public partial class controleur : Form
     {
+        #region global
         public connexionBase maConnexion = new connexionBase();
         public controleur()
         {
@@ -25,6 +29,41 @@ namespace ppe3_desktop
            
         }
 
+        private void allFalse()
+        {
+            validationCompte1.Visible = false;
+            verificationCompte1.Visible = false;
+            ajouterFilm2.Visible = false;
+            modifierFilm1.Visible = false;
+            creationCompte1.Visible = false;
+        }
+
+        private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region Compte
+        private void VerificationCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            allFalse();
+            verificationCompte1.loadCombo(modele.listeClient());
+            verificationCompte1.Visible = true;
+        }
+
+        private void FermetureCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            allFalse();
+            validationCompte1.afficherPage(modele.listeCLientActif(), "");
+            validationCompte1.Visible = true;
+        }
+
+        private void CréerCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            allFalse();
+            creationCompte1.Visible = true;
+        }
         private void VeriificationCompteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             allFalse();
@@ -63,21 +102,9 @@ namespace ppe3_desktop
             Console.WriteLine("Sent");
             allFalse();
         }
+        #endregion
 
-
-        private void allFalse()
-        {
-            validationCompte1.Visible = false;
-            verificationCompte1.Visible = false;
-            ajouterFilm2.Visible = false;
-            modifierFilm1.Visible = false;
-            creationCompte1.Visible = false;
-        }
-
-        private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -135,24 +162,6 @@ namespace ppe3_desktop
             allFalse();
         }
 
-        private void VerificationCompteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            allFalse();
-            verificationCompte1.loadCombo(modele.listeClient());
-            verificationCompte1.Visible = true;
-        }
-
-        private void FermetureCompteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            allFalse();
-            validationCompte1.afficherPage(modele.listeCLientActif(), "");
-            validationCompte1.Visible = true;
-        }
-
-        private void CréerCompteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            allFalse();
-            creationCompte1.Visible = true;
-        }
+        
     }
 }

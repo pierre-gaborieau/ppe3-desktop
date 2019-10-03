@@ -45,6 +45,7 @@
             this.chk_Cheque = new System.Windows.Forms.CheckBox();
             this.txt_pw2 = new System.Windows.Forms.TextBox();
             this.btn_creer = new System.Windows.Forms.Button();
+            this.lbl_error = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -136,7 +137,7 @@
             this.txt_pw.Location = new System.Drawing.Point(184, 204);
             this.txt_pw.Name = "txt_pw";
             this.txt_pw.Size = new System.Drawing.Size(132, 20);
-            this.txt_pw.TabIndex = 12;
+            this.txt_pw.TabIndex = 15;
             this.txt_pw.UseSystemPasswordChar = true;
             // 
             // txt_login
@@ -144,21 +145,21 @@
             this.txt_login.Location = new System.Drawing.Point(184, 178);
             this.txt_login.Name = "txt_login";
             this.txt_login.Size = new System.Drawing.Size(132, 20);
-            this.txt_login.TabIndex = 13;
+            this.txt_login.TabIndex = 14;
             // 
             // txt_prenom
             // 
             this.txt_prenom.Location = new System.Drawing.Point(184, 152);
             this.txt_prenom.Name = "txt_prenom";
             this.txt_prenom.Size = new System.Drawing.Size(132, 20);
-            this.txt_prenom.TabIndex = 14;
+            this.txt_prenom.TabIndex = 13;
             // 
             // txt_nom
             // 
             this.txt_nom.Location = new System.Drawing.Point(184, 126);
             this.txt_nom.Name = "txt_nom";
             this.txt_nom.Size = new System.Drawing.Size(132, 20);
-            this.txt_nom.TabIndex = 15;
+            this.txt_nom.TabIndex = 12;
             // 
             // chk_Cheque
             // 
@@ -166,7 +167,7 @@
             this.chk_Cheque.Location = new System.Drawing.Point(184, 231);
             this.chk_Cheque.Name = "chk_Cheque";
             this.chk_Cheque.Size = new System.Drawing.Size(94, 17);
-            this.chk_Cheque.TabIndex = 16;
+            this.chk_Cheque.TabIndex = 17;
             this.chk_Cheque.Text = "Chèque Inclus";
             this.chk_Cheque.UseVisualStyleBackColor = true;
             // 
@@ -175,7 +176,7 @@
             this.txt_pw2.Location = new System.Drawing.Point(322, 204);
             this.txt_pw2.Name = "txt_pw2";
             this.txt_pw2.Size = new System.Drawing.Size(132, 20);
-            this.txt_pw2.TabIndex = 17;
+            this.txt_pw2.TabIndex = 16;
             this.txt_pw2.UseSystemPasswordChar = true;
             // 
             // btn_creer
@@ -186,11 +187,24 @@
             this.btn_creer.TabIndex = 18;
             this.btn_creer.Text = "Créer";
             this.btn_creer.UseVisualStyleBackColor = true;
+            this.btn_creer.Click += new System.EventHandler(this.Btn_creer_Click);
+            // 
+            // lbl_error
+            // 
+            this.lbl_error.AutoSize = true;
+            this.lbl_error.ForeColor = System.Drawing.Color.Red;
+            this.lbl_error.Location = new System.Drawing.Point(265, 274);
+            this.lbl_error.Name = "lbl_error";
+            this.lbl_error.Size = new System.Drawing.Size(135, 13);
+            this.lbl_error.TabIndex = 19;
+            this.lbl_error.Text = "Veuillez vérifier vos entrées";
+            this.lbl_error.Visible = false;
             // 
             // creationCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.btn_creer);
             this.Controls.Add(this.txt_pw2);
             this.Controls.Add(this.chk_Cheque);
@@ -234,5 +248,6 @@
         private System.Windows.Forms.CheckBox chk_Cheque;
         private System.Windows.Forms.TextBox txt_pw2;
         private System.Windows.Forms.Button btn_creer;
+        private System.Windows.Forms.Label lbl_error;
     }
 }

@@ -37,7 +37,7 @@ namespace ppe3_desktop
         {
             allFalse();
 
-            var listeSend = maConnexion.client.SqlQuery("SELECT * FROM client WHERE actif = 0").ToList();
+            var listeSend = modele.listeClientActif();
 
             validationCompte1.afficherPage(listeSend);
 
@@ -46,24 +46,13 @@ namespace ppe3_desktop
 
         public void ActivationCompte(client c)
         {
-
-            using (var context = new connexionBase())
-            {
-                int noOfRowUpdated = context.Database.ExecuteSqlCommand("Update client set actif=1 where idClient = @id", new SqlParameter("@id", c.idClient));
-            }
-
-
-
+            modele.activationClient(c);
             allFalse();
-
         }
 
         internal void ChangementMotDePasse(string login, string mdp)
         {
-            using (var context = new connexionBase())
-            {
-                int noOfRowUpdated = context.Database.ExecuteSqlCommand("Update client set pwd=@pw where login = @login", new SqlParameter("@pw", mdp), new SqlParameter("@login", login));
-            }
+            modele.changerMdpClient(mdp, login);
 
             var client = new SmtpClient("smtp.gmail.com", 587)
             {

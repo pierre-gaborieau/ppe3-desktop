@@ -67,6 +67,7 @@ namespace ppe3_desktop
         private void allFalse()
         {
             validationCompte1.Visible = false;
+            verificationCompte1.Visible = false;
             ajouterFilm2.Visible = false;
             modifierFilm1.Visible = false;
         }
@@ -132,6 +133,11 @@ namespace ppe3_desktop
             allFalse();
         }
 
-        
+        private void VerificationCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            allFalse();
+            verificationCompte1.loadCombo(modele.listeClient());
+            verificationCompte1.Visible = true;
+        }
     }
 }

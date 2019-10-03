@@ -33,6 +33,7 @@
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validationComtpeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verificationCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.composantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.genreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +53,7 @@
             this.ajouterFilm2 = new ppe3_desktop.VUES.COMPOSANT.FILM.AjouterFilm();
             this.modifierFilm1 = new ppe3_desktop.ModifierFilm();
             this.validationCompte1 = new ppe3_desktop.VUES.COMPTE.validationCompte();
+            this.verificationCompte1 = new ppe3_desktop.VUES.COMPTE.verificationCompte();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +93,8 @@
             // compteToolStripMenuItem
             // 
             this.compteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.validationComtpeToolStripMenuItem});
+            this.validationComtpeToolStripMenuItem,
+            this.verificationCompteToolStripMenuItem});
             this.compteToolStripMenuItem.Name = "compteToolStripMenuItem";
             this.compteToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.compteToolStripMenuItem.Text = "Compte";
@@ -101,9 +104,16 @@
             this.validationComtpeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.validationComtpeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.validationComtpeToolStripMenuItem.Name = "validationComtpeToolStripMenuItem";
-            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.validationComtpeToolStripMenuItem.Text = "Validation Compte";
             this.validationComtpeToolStripMenuItem.Click += new System.EventHandler(this.ValidationComtpeToolStripMenuItem_Click);
+            // 
+            // verificationCompteToolStripMenuItem
+            // 
+            this.verificationCompteToolStripMenuItem.Name = "verificationCompteToolStripMenuItem";
+            this.verificationCompteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.verificationCompteToolStripMenuItem.Text = "Verification Compte";
+            this.verificationCompteToolStripMenuItem.Click += new System.EventHandler(this.VerificationCompteToolStripMenuItem_Click);
             // 
             // composantsToolStripMenuItem
             // 
@@ -288,15 +298,24 @@
             this.validationCompte1.TabIndex = 1;
             this.validationCompte1.Visible = false;
             // 
+            // verificationCompte1
+            // 
+            this.verificationCompte1.Location = new System.Drawing.Point(0, 26);
+            this.verificationCompte1.Name = "verificationCompte1";
+            this.verificationCompte1.Size = new System.Drawing.Size(800, 424);
+            this.verificationCompte1.TabIndex = 7;
+            this.verificationCompte1.Visible = false;
+            // 
             // controleur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.verificationCompte1);
             this.Controls.Add(this.ajouterFilm2);
-            this.Controls.Add(this.modifierFilm1);
-            this.Controls.Add(this.validationCompte1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.validationCompte1);
+            this.Controls.Add(this.modifierFilm1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "controleur";
@@ -334,7 +353,7 @@
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem4;
         private ModifierFilm modifierFilm1;
         private VUES.COMPOSANT.FILM.AjouterFilm ajouterFilm2;
-        private System.Windows.Forms.ToolStripMenuItem veriificationCompteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verificationCompteToolStripMenuItem;
         private VUES.COMPTE.verificationCompte verificationCompte1;
     }
 }

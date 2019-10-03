@@ -131,21 +131,12 @@ namespace ppe3_desktop
             modifierFilm1.Visible = true;
         }
 
-        public void AjouterFilm(List<support> lesSupport, string leTitre, string leReal, int idGenre, string imageName, string duree)
+        public void AjouterSupport(int idSupport, string leTitreSupport, string leRealisateur, string imageSupport, int idGenre)
         {
             using (var context = new connexionBase())
             {
-                int noOfRowUpdated = context.Database.ExecuteSqlCommand("INSERT INTO support (titreSupport, realisateur, image, idGenre) VALUES ('"+leTitre+"', '"+leReal+"', '"+imageName+".jpg', '"+idGenre+"')");
-            }
-
-            int max = 0;
-
-            foreach(support s in lesSupport)
-            {
-                if(s.idSupport > max)
-                {
-                    max = s.idSupport;
-                }
+                int noOfRowUpdated = context.Database.ExecuteSqlCommand("INSERT INTO support (titreSupport, realisateur, image, idGenre) VALUES ('"+ leTitreSupport + "', '"+ leRealisateur + "', '"+ imageSupport + ".jpg', '"+ idGenre + "')");
+                DialogResult Message = MessageBox.Show("Le film a été correctement enregistré", "", MessageBoxButtons.OK);
             }
 
 

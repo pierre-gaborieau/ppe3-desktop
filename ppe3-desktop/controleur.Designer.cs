@@ -109,7 +109,7 @@
             this.validationComtpeToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.validationComtpeToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.validationComtpeToolStripMenuItem.Name = "validationComtpeToolStripMenuItem";
-            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.validationComtpeToolStripMenuItem.Text = "Validation Compte";
             this.validationComtpeToolStripMenuItem.Click += new System.EventHandler(this.ValidationComtpeToolStripMenuItem_Click);
             // 
@@ -295,7 +295,10 @@
             // 
             // ajouterFilm2
             // 
-            this.ajouterFilm2.Location = new System.Drawing.Point(1181, 777);
+            this.ajouterFilm2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ajouterFilm2.Location = new System.Drawing.Point(0, 30);
             this.ajouterFilm2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ajouterFilm2.Name = "ajouterFilm2";
             this.ajouterFilm2.Size = new System.Drawing.Size(800, 427);
@@ -320,7 +323,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.modifierFilm1.Location = new System.Drawing.Point(0, 26);
-            this.modifierFilm1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.modifierFilm1.Margin = new System.Windows.Forms.Padding(2);
             this.modifierFilm1.Name = "modifierFilm1";
             this.modifierFilm1.Size = new System.Drawing.Size(800, 424);
             this.modifierFilm1.TabIndex = 3;

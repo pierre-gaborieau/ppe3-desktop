@@ -13,6 +13,7 @@ namespace ppe3_desktop
     public partial class ModifierFilm : UserControl
     {
         private List<support> lesFilms = new List<support>();
+
         public ModifierFilm()
         {
             InitializeComponent();
@@ -22,6 +23,26 @@ namespace ppe3_desktop
         {
             ListeFilm.DataSource = laListe;
             lesFilms = laListe;
+        }
+
+        private void ListeFilm_SelectionChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            support send = new support();
+
+            foreach (support c in lesFilms)
+            {
+                if ( == c)
+                {
+                    movieTitle.Text = c.titreSupport;
+                    send = c;
+                }
+            }
+
+            //((controleur)(this.Parent)).modifierFilm(send, 1);
         }
     }
 }

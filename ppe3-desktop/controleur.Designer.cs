@@ -109,7 +109,7 @@
             this.validationComtpeToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.validationComtpeToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.validationComtpeToolStripMenuItem.Name = "validationComtpeToolStripMenuItem";
-            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.validationComtpeToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.validationComtpeToolStripMenuItem.Text = "Validation Compte";
             this.validationComtpeToolStripMenuItem.Click += new System.EventHandler(this.ValidationComtpeToolStripMenuItem_Click);
             // 
@@ -287,6 +287,9 @@
             // 
             // verificationCompte1
             // 
+            this.verificationCompte1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.verificationCompte1.Location = new System.Drawing.Point(0, 26);
             this.verificationCompte1.Name = "verificationCompte1";
             this.verificationCompte1.Size = new System.Drawing.Size(800, 424);
@@ -328,6 +331,9 @@
             // 
             // creationCompte1
             // 
+            this.creationCompte1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.creationCompte1.Location = new System.Drawing.Point(0, 22);
             this.creationCompte1.Name = "creationCompte1";
             this.creationCompte1.Size = new System.Drawing.Size(800, 428);
@@ -339,12 +345,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.creationCompte1);
-            this.Controls.Add(this.verificationCompte1);
             this.Controls.Add(this.ajouterFilm2);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.verificationCompte1);
             this.Controls.Add(this.validationCompte1);
             this.Controls.Add(this.modifierFilm1);
+            this.Controls.Add(this.creationCompte1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "controleur";

@@ -126,7 +126,7 @@ namespace ppe3_desktop
         private void modifierToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             allFalse();
-            modifierFilm1.afficherPage(modele.getListSupport());
+            modifierFilm1.afficherPage(modele.getListSupport(), modele.getListGenre());
             modifierFilm1.Visible = true;
         }
 
@@ -135,9 +135,10 @@ namespace ppe3_desktop
             modele.AjouterSupport(idSupport, leTitreSupport, leRealisateur, imageSupport, idGenre);
         }
 
-        public void modifierFilm()
+        public void modifierSupport(support leSupport, int idSupport, string leTitreSupport, string leRealisateur, string imageSupport, int idGenre)
         {
-
+            modele.ModifierSupport(leSupport, idSupport, leTitreSupport, leRealisateur, imageSupport, idGenre);
+            MessageBox.Show("Résultat", "La modification a pris effet");
         }
         #endregion
     }

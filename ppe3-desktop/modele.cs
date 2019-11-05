@@ -96,6 +96,13 @@ namespace ppe3_desktop
 
             return listeGenre;
         }
+        public static void ModifierSupport(support leSupport, int idSupport, string leTitreSupport, string leRealisateur, string imageSupport, int idGenre)
+        {
+            using (var context = new connexionBase())
+            {
+                int noOfRowUpdated = context.Database.ExecuteSqlCommand("UPDATE support set titreSupport=@leTitreSupport, realisateur=@leRealisateur, image=@imageSupport, idGenre=@idGenre WHERE idSupport=@idSupport", new SqlParameter("@idSupport", idSupport), new SqlParameter("@leTitreSupport", leTitreSupport), new SqlParameter("@leRealisateur", leRealisateur), new SqlParameter("@imageSupport", imageSupport), new SqlParameter("@idGenre", idGenre));
+            }
+        }
         #endregion
 
     }

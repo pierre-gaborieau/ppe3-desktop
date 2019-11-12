@@ -57,6 +57,12 @@
             this.validationCompte1 = new ppe3_desktop.VUES.COMPTE.validationCompte();
             this.modifierFilm1 = new ppe3_desktop.ModifierFilm();
             this.creationCompte1 = new ppe3_desktop.VUES.COMPTE.creationCompte();
+            this.recherchesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parGenreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parSupportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parRéférenceEmpruntToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parDateAbonnementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +72,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
+            this.recherchesToolStripMenuItem,
             this.compteToolStripMenuItem,
             this.composantsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -89,7 +96,7 @@
             this.quitterToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.quitterToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
             // 
@@ -343,6 +350,48 @@
             this.creationCompte1.TabIndex = 8;
             this.creationCompte1.Visible = false;
             // 
+            // recherchesToolStripMenuItem
+            // 
+            this.recherchesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.parGenreToolStripMenuItem,
+            this.parSupportToolStripMenuItem,
+            this.parClientToolStripMenuItem,
+            this.parRéférenceEmpruntToolStripMenuItem,
+            this.parDateAbonnementToolStripMenuItem});
+            this.recherchesToolStripMenuItem.Name = "recherchesToolStripMenuItem";
+            this.recherchesToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.recherchesToolStripMenuItem.Text = "Recherches";
+            // 
+            // parGenreToolStripMenuItem
+            // 
+            this.parGenreToolStripMenuItem.Name = "parGenreToolStripMenuItem";
+            this.parGenreToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.parGenreToolStripMenuItem.Text = "Par Genre";
+            // 
+            // parSupportToolStripMenuItem
+            // 
+            this.parSupportToolStripMenuItem.Name = "parSupportToolStripMenuItem";
+            this.parSupportToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.parSupportToolStripMenuItem.Text = "Par Support";
+            // 
+            // parClientToolStripMenuItem
+            // 
+            this.parClientToolStripMenuItem.Name = "parClientToolStripMenuItem";
+            this.parClientToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.parClientToolStripMenuItem.Text = "Par Client";
+            // 
+            // parRéférenceEmpruntToolStripMenuItem
+            // 
+            this.parRéférenceEmpruntToolStripMenuItem.Name = "parRéférenceEmpruntToolStripMenuItem";
+            this.parRéférenceEmpruntToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.parRéférenceEmpruntToolStripMenuItem.Text = "Par Référence Emprunt";
+            // 
+            // parDateAbonnementToolStripMenuItem
+            // 
+            this.parDateAbonnementToolStripMenuItem.Name = "parDateAbonnementToolStripMenuItem";
+            this.parDateAbonnementToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.parDateAbonnementToolStripMenuItem.Text = "Par date Abonnement";
+            // 
             // controleur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,6 +445,12 @@
         private System.Windows.Forms.ToolStripMenuItem fermetureCompteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem créerCompteToolStripMenuItem;
         private VUES.COMPTE.creationCompte creationCompte1;
+        private System.Windows.Forms.ToolStripMenuItem recherchesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parGenreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parSupportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parRéférenceEmpruntToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parDateAbonnementToolStripMenuItem;
     }
 }
 

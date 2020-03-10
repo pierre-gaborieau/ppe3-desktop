@@ -115,64 +115,31 @@ namespace ppe3_desktop
         }
         #endregion
 
-        
-
+        #region Composant
         private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             allFalse();
-
-            List<support> listeSupport = new List<support>();
-            List<genre> listeGenre = new List<genre>();
-            foreach (support c in maConnexion.support.ToList())
-            {
-                foreach (film f in maConnexion.film.ToList())
-                {
-                    if (c.idSupport == f.idFilm)
-                    {
-                        listeSupport.Add(c);
-                    }
-                }
-            }
-            foreach (genre g in maConnexion.genre.ToList())
-            {
-                listeGenre.Add(g);
-            }
-            ajouterFilm2.SendListe(listeSupport, listeGenre);
+            ajouterFilm2.SendListe(modele.getListSupport(), modele.getListGenre());
             ajouterFilm2.Visible = true;
         }
 
         private void modifierToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             allFalse();
-
-            List<support> listeSend = new List<support>();
-            foreach (support c in maConnexion.support.ToList())
-            {
-                foreach (film f in maConnexion.film.ToList())
-                {
-                    if(c.idSupport == f.idFilm)
-                    {
-                        listeSend.Add(c);
-                    }
-                }
-            }
-            modifierFilm1.afficherPage(listeSend);
-
+            modifierFilm1.afficherPage(modele.getListSupport(), modele.getListGenre());
             modifierFilm1.Visible = true;
         }
 
         public void AjouterSupport(int idSupport, string leTitreSupport, string leRealisateur, string imageSupport, int idGenre)
         {
-            using (var context = new connexionBase())
-            {
-                int noOfRowUpdated = context.Database.ExecuteSqlCommand("INSERT INTO support (titreSupport, realisateur, image, idGenre) VALUES ('"+ leTitreSupport + "', '"+ leRealisateur + "', '"+ imageSupport + ".jpg', '"+ idGenre + "')");
-                DialogResult Message = MessageBox.Show("Le film a été correctement enregistré", "", MessageBoxButtons.OK);
-            }
-
-
-            allFalse();
+            modele.AjouterSupport(idSupport, leTitreSupport, leRealisateur, imageSupport, idGenre);
         }
 
-        
+        public void modifierSupport(support leSupport, int idSupport, string leTitreSupport, string leRealisateur, string imageSupport, int idGenre)
+        {
+            modele.ModifierSupport(leSupport, idSupport, leTitreSupport, leRealisateur, imageSupport, idGenre);
+            MessageBox.Show("Résultat", "La modification a pris effet");
+        }
+        #endregion
     }
 }

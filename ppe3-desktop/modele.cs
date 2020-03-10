@@ -58,5 +58,49 @@ namespace ppe3_desktop
         }
 
         #endregion
+
+        #region Composant
+        public static void AjouterSupport(int idSupport, string leTitreSupport, string leRealisateur, string imageSupport, int idGenre)
+        {
+            using (var context = new connexionBase())
+            {
+                int noOfRowUpdated = context.Database.ExecuteSqlCommand("INSERT INTO support (titreSupport, realisateur, image, idGenre) VALUES ('" + leTitreSupport + "', '" + leRealisateur + "', '" + imageSupport + ".jpg', '" + idGenre + "')");
+            }
+        }
+        public static List<support> getListSupport()
+        {
+            List<support> listeSupport = new List<support>();
+            foreach (support c in maConnexion.support.ToList())
+            {
+                foreach (film f in maConnexion.film.ToList())
+                {
+                    if (c.idSupport == f.idFilm)
+                    {
+                        listeSupport.Add(c);
+                    }
+                }
+            }
+
+            return listeSupport;
+        }
+        public static List<genre> getListGenre()
+        {
+            List<genre> listeGenre = new List<genre>();
+            foreach (genre g in maConnexion.genre.ToList())
+            {
+                listeGenre.Add(g);
+            }
+
+            return listeGenre;
+        }
+        public static void ModifierSupport(support leSupport, int idSupport, string leTitreSupport, string leRealisateur, string imageSupport, int idGenre)
+        {
+            using (var context = new connexionBase())
+            {
+                int noOfRowUpdated = context.Database.ExecuteSqlCommand("UPDATE support set titreSupport=@leTitreSupport, realisateur=@leRealisateur, image=@imageSupport, idGenre=@idGenre WHERE idSupport=@idSupport", new SqlParameter("@idSupport", idSupport), new SqlParameter("@leTitreSupport", leTitreSupport), new SqlParameter("@leRealisateur", leRealisateur), new SqlParameter("@imageSupport", imageSupport), new SqlParameter("@idGenre", idGenre));
+            }
+        }
+        #endregion
+
     }
 }

@@ -147,6 +147,12 @@
     <Compile Include="VUES\COMPOSANT\FILM\AjouterFilm.Designer.cs">
       <DependentUpon>AjouterFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VUES\COMPOSANT\GENRE\AjouterGenre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VUES\COMPOSANT\GENRE\AjouterGenre.Designer.cs">
+      <DependentUpon>AjouterGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="VUES\COMPTE\creationCompte.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </Compile>
     <EmbeddedResource Include="VUES\COMPOSANT\FILM\AjouterFilm.resx">
       <DependentUpon>AjouterFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VUES\COMPOSANT\GENRE\AjouterGenre.resx">
+      <DependentUpon>AjouterGenre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VUES\COMPTE\creationCompte.resx">
       <DependentUpon>creationCompte.cs</DependentUpon>
@@ -256,9 +265,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="VUES\COMPOSANT\GENRE\" />
-    <Folder Include="VUES\COMPOSANT\SERIE\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

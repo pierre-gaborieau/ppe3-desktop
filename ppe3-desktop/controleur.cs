@@ -62,7 +62,7 @@ namespace ppe3_desktop
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.Send(message);
             }
-            catch (Exception) { }
+            catch (Exception e) { }
         }
 
         #endregion
@@ -78,7 +78,7 @@ namespace ppe3_desktop
         private void FermetureCompteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             allFalse();
-            validationCompte1.afficherPage(modele.listeCLientActif(), "");
+            validationCompte1.afficherPage(modele.listeClientCheckActif(1), "");
             validationCompte1.Visible = true;
         }
 
@@ -92,7 +92,7 @@ namespace ppe3_desktop
         {
             allFalse();
 
-            var listeSend = modele.listeClientNonActif();
+            var listeSend = modele.listeClientCheckActif(0);
 
             validationCompte1.afficherPage(listeSend, "validation");
 

@@ -15,27 +15,23 @@ namespace ppe3_desktop
         #region Client
         public static List<client> listeClient()
         {
-            var listeSend = maConnexion.client.SqlQuery("SELECT * FROM client").ToList();
+            var listeSend = maConnexion.client.ToList();
 
             return (listeSend);
         }
 
-        public static List<client> listeClientNonActif()
+        public static List<client> listeClientCheckActif(int val)
         {
-            var listeSend = maConnexion.client.SqlQuery("SELECT * FROM client WHERE actif = 0").ToList();
+            var listeSend = maConnexion.client.ToList().Where(x => x.actif == val).ToList();
 
-            return (listeSend);
-        }
-
-        public static List<client> listeCLientActif()
-        {
-            var listeSend = maConnexion.client.SqlQuery("SELECT * FROM client WHERE actif = 1").ToList();
             return (listeSend);
         }
 
         public static void ChangerStatus(client c, int value)
         {
             int noOfRowUpdated = maConnexion.Database.ExecuteSqlCommand("Update client set actif=@status where idClient = @id", new SqlParameter("@id", c.idClient), new SqlParameter("@status", value));
+
+
         }
 
 
@@ -60,6 +56,7 @@ namespace ppe3_desktop
             int no = maConnexion.Database.ExecuteSqlCommand("Insert into client values(@nom, @prenom, @email, @dateActif, @login, @pw, @actif)", new SqlParameter("@nom", nom), new SqlParameter("@prenom", prenom), new SqlParameter("@email", email), 
                 new SqlParameter("dateActif", date), new SqlParameter("@login", login), new SqlParameter("@pw", pw), new SqlParameter("@actif", actif));
         }
+
         #endregion
     }
 }

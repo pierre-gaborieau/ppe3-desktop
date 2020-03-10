@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -53,10 +53,17 @@ namespace ppe3_desktop.VUES.COMPTE
         {
             if(txt_mdp.Text == txt_mdp2.Text && txt_mdp.Text.Length > 8)
             {
-                ((controleur)(this.Parent)).ChangementMotDePasse(cb_client.Text, txt_mdp.Text, email);
-                
-                this.Visible = false;
-                lbl_error.Visible = false;
+                string email;
+                foreach(var u in modele.listeClient())
+                {
+                    if(u.login == cb_client.Text)
+                    {
+                        ((controleur)(this.Parent)).ChangementMotDePasse(cb_client.Text, txt_mdp.Text, u.emailClient);
+                        this.Visible = false;
+                        lbl_error.Visible = false;
+                        break;
+                    }
+                }   
             }
             else
             {
